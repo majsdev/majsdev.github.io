@@ -1,43 +1,42 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+    BrowserRouter as Router,
+    Switch,
+    Route
 } from "react-router-dom";
 import {
-  About,
-  Home
+    About,
+    Art,
+    Home,
+    NavBar
 } from './pages';
 
 
 function App() {
-  return (
+return (
 
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
+    <div className="App">
+        <Router>
+            <NavBar />
+            <Switch>
 
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                
+                <Route path="/art">
+                    <Art />
+                </Route>
 
-          <Route path="/">
-            <Home></Home>
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+                <Route path="/">
+                    <Home />
+                </Route>
 
-  );
+            </Switch>
+        </Router>
+    </div>
+
+);
 }
 
 export default App;
