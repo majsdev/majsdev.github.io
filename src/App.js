@@ -1,42 +1,36 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route
+  BrowserRouter as Router,
+  Switch,
+  Route
 } from "react-router-dom";
 import {
-    About,
-    Art,
-    Home,
-    NavBar
+  About,
+  Art,
+  Home,
+  Note,
+  Work,
+  NavBar
 } from './pages';
 
 
 function App() {
-return (
-
+  return (
     <div className="App">
-        <Router>
-            <NavBar />
-            <Switch>
+      <Router>
+          <NavBar />
 
-                <Route path="/about">
-                    <About />
-                </Route>
-                
-                <Route path="/art">
-                    <Art />
-                </Route>
-
-                <Route path="/">
-                    <Home />
-                </Route>
-
-            </Switch>
-        </Router>
+          <Switch>
+            <Route exact path="/"> <Home /> </Route>
+            <Route path="/about"> <About /> </Route>
+            <Route path="/art"> <Art /> </Route>
+            <Route path="/note"> <Note /> </Route>
+            <Route path="/work"> <Work /> </Route>
+            <Route path="*"> 404 </Route>
+          </Switch>
+      </Router>
     </div>
-
-);
+  );
 }
 
 export default App;

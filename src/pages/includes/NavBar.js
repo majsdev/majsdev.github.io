@@ -1,22 +1,29 @@
 import React from 'react';
 import {
-    Link
-  } from "react-router-dom";
+  Link
+} from "react-router-dom";
 
 function NavBar() {
+  const routes = [
+    {path: '/', name: 'Home'},
+    {path: '/about', name: 'About'},
+    {path: '/art', name: 'Art'},
+    {path: '/work', name: 'Work'},
+    {path: '/note', name: 'Note'},
+  ];
+  const routesJSX = [];
+
+  for (let route of routes) {
+    routesJSX.push(
+      <li key={`${route.name}`}>
+        <Link to={route.path}>{route.name}</Link>
+      </li>
+    );
+  }
+
   return (
     <div className="NavBar">
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/about">About</Link>
-            </li>
-            <li>
-                <Link to="/art">Art</Link>
-            </li>
-        </ul>
+        <ul>{routesJSX}</ul>
     </div>
   );
 }
