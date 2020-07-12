@@ -34,7 +34,6 @@ function Art() {
 
     return (
         <div className="Art">
-
             <Switch>
                 <Route exact path={path}>
                     <h3>The explicable and inexplicables</h3>

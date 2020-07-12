@@ -9,7 +9,7 @@ html, body {
 
 }
 
-.App {
+.content {
 
   box-sizing: content-box;
   width: 320px;
@@ -23,6 +23,21 @@ html, body {
 
   position: relative;
     
+}
+
+.console {
+  display: grid;
+  /* box-sizing: content-box; */
+  width: 320px;
+  height: 144px;
+  padding: 30px;
+
+  background-color: #eee;
+  border: 2px solid #000000;
+
+  /* overflow: scroll; */
+
+  position: relative;
 }
 
 .A {

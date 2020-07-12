@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Link
 } from "react-router-dom";
+import './NavBar.css';
 
 function NavBar() {
   const routes = [
@@ -23,7 +24,7 @@ function NavBar() {
 
   return (
     <div className="NavBar">
-        <ul>{routesJSX}</ul>
+        <ul id="menu">{routesJSX}</ul>
     </div>
   );
 }
