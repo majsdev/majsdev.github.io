@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Link
 } from "react-router-dom";
 import './NavBar.css';
+import {
+  VISIBLE,
+  HIDDEN
+} from './cssClasses';
 
 function NavBar() {
+  const [gtVisiblility, setGtVisiblility] = useState(HIDDEN);
+
   const routes = [
     {path: '/', name: 'Home'},
     {path: '/about', name: 'About'},
@@ -17,7 +23,14 @@ function NavBar() {
   for (let route of routes) {
     routesJSX.push(
       <li key={`${route.name}`}>
-        <Link to={route.path}>{route.name}</Link>
+        <Link to={route.path}>
+          <span 
+            className={`greater-than ${gtVisiblility}`}
+          >
+            <span>&gt;</span>
+          </span>
+          {route.name}
+        </Link>
       </li>
     );
   }

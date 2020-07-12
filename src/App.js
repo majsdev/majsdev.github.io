@@ -18,6 +18,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+
       <div className="content container">
         <Router>
             <NavBar />
@@ -31,15 +32,19 @@ function App() {
               <Route path="*"> 404 </Route>
             </Switch>
         </Router>
+      </div>
 
-        <div className="A"><button>A</button></div>
-        <div className="B"><button>B</button></div>
-      </div>
       <div className="console">
-        <button>
-          select
-        </button>
+        <div className="up"><span className="console-item">⬆︎</span></div>
+        <div className="right"><span className="console-item">➽</span></div>
+        <div className="left"><span className="console-item">☚</span></div>
+        <div className="down"><span className="console-item">⟱</span></div>
+        <div className="select"><span className="console-item">select</span></div>
+        <div className="enter"><span className="console-item">enter</span></div>
+        <div className="A"><span className="console-item">A</span></div>
+        <div className="B"><span className="console-item">B</span></div>
       </div>
+
     </div>
   );
 }

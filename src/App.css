@@ -40,13 +40,48 @@ html, body {
   position: relative;
 }
 
-.A {
-  position: absolute;
-  bottom: 8px;
-  right: 64px;
+.up {
+  grid-column: 2;
+  grid-row: 1;
 }
+
+.right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.down {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.select {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+.enter {
+  grid-column: 6;
+  grid-row: 4;
+}
+
+.A {
+  grid-column: 8;
+  grid-row: 2;
+}
+
 .B {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
+  grid-column: 10;
+  grid-row: 2;
+}
+
+.console-item:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }
