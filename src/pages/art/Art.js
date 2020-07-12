@@ -11,19 +11,25 @@ function Art() {
     let { path } = useRouteMatch();
     let links = [];
     let routes = [];
-    Object.keys(themes).map( t =>
-        links.push(
-            <li key={`link_${t}`}>
-                <Link to={`${path}/${t}`}>{t}</Link>
-            </li>
-        )
+
+    Object.entries(themes).map( ([key,value]) => {
+            links.push(
+                <li key={`link_${key}`}>
+                    <Link to={`${path}/${key}`}>{key}</Link>
+                </li>
+            )
+            routes.push(
+                <Route path={`${path}/${key}`} key={`route_${key}`} >
+                    replace with generic art component witht "{key}" content
+                </Route>
+            )
+        }
     )
-    Object.entries(themes).map( ([key,value]) =>
-        routes.push(
-            <Route path={`${path}/${key}`} key={`route_${key}`} >
-                replace with generic art component witht "{key}" content
-            </Route>
-        )
+
+    routes.push(
+        <Route path={`${path}/*`} key={`route_404`} >
+            404
+        </Route>
     )
 
     return (

@@ -12,6 +12,7 @@ import {
   Work,
   NavBar
 } from './pages';
+import './App.css';
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
             <Route path="*"> 404 </Route>
           </Switch>
       </Router>
+
+      <div className="A"><button>A</button></div>
+      <div className="B"><button>B</button></div>
     </div>
   );
 }
