@@ -14,7 +14,7 @@ html, body {
   box-sizing: content-box;
   width: 320px;
   height: 288px;
-  padding: 30px;  
+  padding: 30px;
 
   background-color: #eee;
   border: 2px solid #000000;
@@ -25,7 +25,17 @@ html, body {
     
 }
 
+/* .banner {
+  width: 320px;
+  padding: 10px 30px;
+  background-color: #eee;
+  border: 2px solid #000000;
+
+  text-align: center;
+} */
+
 .console {
+  position: relative;
   display: grid;
   /* box-sizing: content-box; */
   width: 320px;
@@ -71,17 +81,43 @@ html, body {
 }
 
 .A {
-  grid-column: 8;
-  grid-row: 2;
-}
-
-.B {
   grid-column: 10;
   grid-row: 2;
 }
 
-.console-item:hover {
+.B {
+  grid-column: 8;
+  grid-row: 2;
+}
+
+.direction-button{
+  font-size: 2em;
+  border-radius: 2.5px;
   color: white;
   background-color: black;
+  padding: 5px;
+}
+
+.action-button {
+  font-size: 2em;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+}
+
+.control-button {
+  border-radius: 4px;
+  color: white;
+  background-color: black;
+  padding: 3px;
+}
+
+.console-item:hover {
   cursor: pointer;
+}
+
+.console-item:active{
+  color: black;
+  background-color: white;
 }

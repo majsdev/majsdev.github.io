@@ -1,14 +1,16 @@
-/* .NavBar {
-  display: flex;
-  justify-content: space-evenly;
-} */
+.menu {
+  position: absolute;
+  bottom: 10px;
+  /* color: white;
+  background-color: black; */
+}
 
 /* list */
 ul {
   padding: 0;
   list-style-type: none;
 }
-ul#menu li {
+ul#nav-items li {
   display: inline;
 }
 

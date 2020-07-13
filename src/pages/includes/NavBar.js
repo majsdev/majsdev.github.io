@@ -36,8 +36,8 @@ function NavBar() {
   }
 
   return (
-    <div className="NavBar">
-        <ul id="menu">{routesJSX}</ul>
+    <div className="NavBar menu">
+        <ul id="nav-items">{routesJSX}</ul>
     </div>
   );
 }

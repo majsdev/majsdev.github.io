@@ -21,8 +21,6 @@ function App() {
 
       <div className="content container">
         <Router>
-            <NavBar />
-
             <Switch>
               <Route exact path="/"> <Home /> </Route>
               <Route path="/about"> <About /> </Route>
@@ -31,18 +29,24 @@ function App() {
               <Route path="/work"> <Work /> </Route>
               <Route path="*"> 404 </Route>
             </Switch>
+            
+            <NavBar />
         </Router>
       </div>
 
+      {/* <div className="banner">
+        majiasheng
+      </div> */}
+
       <div className="console">
-        <div className="up"><span className="console-item">⬆︎</span></div>
-        <div className="right"><span className="console-item">➽</span></div>
-        <div className="left"><span className="console-item">☚</span></div>
-        <div className="down"><span className="console-item">⟱</span></div>
-        <div className="select"><span className="console-item">select</span></div>
-        <div className="enter"><span className="console-item">enter</span></div>
-        <div className="A"><span className="console-item">A</span></div>
-        <div className="B"><span className="console-item">B</span></div>
+        <div className="up"><span className="console-item direction-button">⬆︎</span></div>
+        <div className="right"><span className="console-item direction-button">➽</span></div>
+        <div className="left"><span className="console-item direction-button">☚</span></div>
+        <div className="down"><span className="console-item direction-button">⟱</span></div>
+        <div className="select"><span className="console-item control-button">SELECT</span></div>
+        <div className="enter"><span className="console-item control-button">ENTER</span></div>
+        <div className="A"><span className="console-item action-button">A</span></div>
+        <div className="B"><span className="console-item action-button">B</span></div>
       </div>
 
     </div>
