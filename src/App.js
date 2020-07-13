@@ -38,6 +38,7 @@ function App() {
         majiasheng
       </div> */}
 
+      {/* TODO: move the following to a separate file */}
       <div className="console">
         <div className="up"><span className="console-item direction-button">⬆︎</span></div>
         <div className="right"><span className="console-item direction-button">➽</span></div>
