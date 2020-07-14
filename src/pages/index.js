@@ -4,3 +4,4 @@ export { Home } from './home';
 export { Note } from './note';
 export { Work } from './work';
 export { NavBar } from './includes';
+export { Console } from './includes';

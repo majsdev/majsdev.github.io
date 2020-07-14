@@ -1,8 +1,8 @@
 .menu {
   position: absolute;
   bottom: 10px;
-  /* color: white;
-  background-color: black; */
+
+  width: 320px;
 }
 
 /* list */

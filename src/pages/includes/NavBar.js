@@ -7,25 +7,19 @@ import {
   VISIBLE,
   HIDDEN
 } from './cssClasses';
+import { routes } from '../../routes';
 
-function NavBar() {
-  const [gtVisiblility, setGtVisiblility] = useState(HIDDEN);
-
-  const routes = [
-    {path: '/', name: 'Home'},
-    {path: '/about', name: 'About'},
-    {path: '/art', name: 'Art'},
-    {path: '/work', name: 'Work'},
-    {path: '/note', name: 'Note'},
-  ];
+function NavBar(props) {
+  const getNavBarVisibilityClass = () => props.isMenuOpened ? VISIBLE : HIDDEN;
+  const getNavItemVisibilityClass = (indexOfNavItem) => props.indexOfSelectedRoute === indexOfNavItem? VISIBLE : HIDDEN;
   const routesJSX = [];
 
-  for (let route of routes) {
+  for (let [index, route] of routes.entries()) {
     routesJSX.push(
       <li key={`${route.name}`}>
         <Link to={route.path}>
           <span 
-            className={`greater-than ${gtVisiblility}`}
+            // className={`greater-than ${getNavItemVisibilityClass(index)}`}
           >
             <span>&gt;</span>
           </span>
@@ -36,7 +30,7 @@ function NavBar() {
   }
 
   return (
-    <div className="NavBar menu">
+    <div className={`NavBar menu ${getNavBarVisibilityClass()}`}>
         <ul id="nav-items">{routesJSX}</ul>
     </div>
   );

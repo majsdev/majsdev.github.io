@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,12 +10,29 @@ import {
   Home,
   Note,
   Work,
-  NavBar
+  NavBar,
+  Console
 } from './pages';
 import './App.css';
 
 
 function App() {
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [indexOfSelectedRoute, setIndexOfSelectedRoute] = useState(0)
+  const closeMenu = () => setIsMenuOpened(false);
+  const openMenu = () => setIsMenuOpened(true);
+  const handleSelectOnClick = () => {
+    console.log(isMenuOpened)
+    if (!isMenuOpened) {
+      openMenu();
+    } else {
+      // TODO: show cursor at next menu item
+      console.log('TODO: show cursor at next menu item');
+    }
+  }
+  
+
+
   return (
     <div className="App">
 
@@ -30,7 +47,10 @@ function App() {
               <Route path="*"> 404 </Route>
             </Switch>
             
-            <NavBar />
+            <NavBar 
+              isMenuOpened={isMenuOpened}
+              indexOfSelectedRoute={indexOfSelectedRoute}
+            />
         </Router>
       </div>
 
@@ -38,18 +58,9 @@ function App() {
         majiasheng
       </div> */}
 
-      {/* TODO: move the following to a separate file */}
-      <div className="console">
-        <div className="up"><span className="console-item direction-button">⬆︎</span></div>
-        <div className="right"><span className="console-item direction-button">➽</span></div>
-        <div className="left"><span className="console-item direction-button">☚</span></div>
-        <div className="down"><span className="console-item direction-button">⟱</span></div>
-        <div className="select"><span className="console-item control-button">SELECT</span></div>
-        <div className="enter"><span className="console-item control-button">ENTER</span></div>
-        <div className="A"><span className="console-item action-button">A</span></div>
-        <div className="B"><span className="console-item action-button">B</span></div>
-      </div>
-
+      <Console 
+        handleSelectOnClick={handleSelectOnClick}
+      />
     </div>
   );
 }
