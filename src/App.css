@@ -15,21 +15,38 @@ html, body {
   margin: 3em 2em;
 }
 
-.content {
+.container {
 
-  box-sizing: content-box;
-  width: 320px;
+  /* box-sizing: content-box; */
+  /* width: 320px;
   height: 288px;
-  padding: 30px;
+  padding: 30px; */
+  width: 380px;
+  height: 348px;
 
-  background-color: #eee;
+  background-color: rgb(47, 47, 47);
   border: 2px solid #000000;
   border-radius: 5px 5px 0px 0px;
 
-  overflow: scroll;
-
   position: relative;
-    
+  overflow: hidden;
+}
+
+.content {
+  /* box-sizing: content-box; */
+  z-index: 1;
+  
+  width: 85%;
+  height: 85%;
+  background-color: #eee;
+  
+  /* opacity: 50%; */
+  
+  position: absolute;
+  top: 7.5%;
+  left: 7.5%;
+
+  overflow: scroll;
 }
 
 /* .banner {
@@ -49,7 +66,9 @@ html, body {
   height: 144px;
   padding: 30px;
 
-  background-color: #eee;
+  /* background-color: #eee; */
+  background-color: rgb(47, 47, 47);
+
   border: 2px solid #000000;
   border-radius: 0px 0px 30px 5px;
 
