@@ -16,11 +16,6 @@ html, body {
 }
 
 .container {
-
-  /* box-sizing: content-box; */
-  /* width: 320px;
-  height: 288px;
-  padding: 30px; */
   width: 380px;
   height: 348px;
 
@@ -39,8 +34,6 @@ html, body {
   width: 85%;
   height: 85%;
   background-color: #eee;
-  
-  /* opacity: 50%; */
   
   position: absolute;
   top: 7.5%;

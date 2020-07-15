@@ -14,24 +14,27 @@ import {
   Console
 } from './pages';
 import './App.css';
+import { NUMBER_OF_ROUTES } from './routes';
 
 
 function App() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const [indexOfSelectedRoute, setIndexOfSelectedRoute] = useState(0)
+  const [indexOfSelectedRoute, setIndexOfSelectedRoute] = useState(0);
   const closeMenu = () => setIsMenuOpened(false);
   const openMenu = () => setIsMenuOpened(true);
   const handleSelectOnClick = () => {
-    console.log(isMenuOpened)
     if (!isMenuOpened) {
       openMenu();
     } else {
-      // TODO: show cursor at next menu item
-      console.log('TODO: show cursor at next menu item');
+      setIndexOfSelectedRoute((indexOfSelectedRoute+1)%NUMBER_OF_ROUTES);
     }
   }
-  
-
+  const handleBOnClick = () => {
+    if (isMenuOpened) {
+      closeMenu();
+      setIndexOfSelectedRoute(0);
+    }
+  }
 
   return (
     <div className="App">
@@ -62,6 +65,7 @@ function App() {
 
       <Console 
         handleSelectOnClick={handleSelectOnClick}
+        handleBOnClick={handleBOnClick}
       />
     </div>
   );

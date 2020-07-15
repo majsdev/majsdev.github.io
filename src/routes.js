@@ -5,3 +5,5 @@ export const routes = [
     {path: '/work', name: 'Work'},
     {path: '/note', name: 'Note'},
 ];
+
+export const NUMBER_OF_ROUTES = routes.length;

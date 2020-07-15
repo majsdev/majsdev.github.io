@@ -11,7 +11,11 @@ import { routes } from '../../routes';
 
 function NavBar(props) {
   const getNavBarVisibilityClass = () => props.isMenuOpened ? VISIBLE : HIDDEN;
-  const getNavItemVisibilityClass = (indexOfNavItem) => props.indexOfSelectedRoute === indexOfNavItem? VISIBLE : HIDDEN;
+  const getNavItemVisibilityClass = (indexOfNavItem) => {
+    if (props.indexOfSelectedRoute === indexOfNavItem && props.isMenuOpened)
+      return VISIBLE
+    return HIDDEN;
+  }
   const routesJSX = [];
 
   for (let [index, route] of routes.entries()) {
@@ -19,7 +23,7 @@ function NavBar(props) {
       <li key={`${route.name}`}>
         <Link to={route.path}>
           <span 
-            // className={`greater-than ${getNavItemVisibilityClass(index)}`}
+            className={`greater-than ${getNavItemVisibilityClass(index)}`}
           >
             <span>&gt;</span>
           </span>

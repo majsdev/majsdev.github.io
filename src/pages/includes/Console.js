@@ -18,7 +18,14 @@ function Console(props) {
             </div>
             <div className="enter"><span className="console-item control-button">ENTER</span></div>
             <div className="A"><span className="console-item action-button">A</span></div>
-            <div className="B"><span className="console-item action-button">B</span></div>
+            <div className="B">
+                <span 
+                    className="console-item action-button"
+                    onClick={props.handleBOnClick}
+                >
+                    B
+                </span>
+            </div>
         </div>
     );
 }

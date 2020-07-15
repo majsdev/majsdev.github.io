@@ -26,6 +26,11 @@ a:hover {
   background-color: black;
 }
 
+.selected-item {
+  color: white;
+  background-color: black;
+}
+
 /* greater than signs */
 .hidden {
   visibility: hidden;
