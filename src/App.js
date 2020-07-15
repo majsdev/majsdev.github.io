@@ -63,7 +63,8 @@ function App() {
         majiasheng
       </div> */}
 
-      <Console 
+      <Console
+        indexOfSelectedRoute={indexOfSelectedRoute}
         handleSelectOnClick={handleSelectOnClick}
         handleBOnClick={handleBOnClick}
       />
