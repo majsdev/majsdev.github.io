@@ -1,14 +1,13 @@
 import React from 'react';
 import { routes } from '../../routes';
-// import { useHistory } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 
 function Console(props) {
-    // const history = useHistory();
-    const handleEnterOnClick = (path) => {
 
-        // TODO: make sure this is strictly for when menu is opened
-        // history.push(path);
+    const handleEnterOnClick = () => {
+        if (props.isMenuOpened)
+            props.history.push(routes[props.indexOfSelectedRoute].path);
     }
     return (
         <div className="console">
@@ -27,7 +26,7 @@ function Console(props) {
             <div className="enter">
                 <span
                     className="console-item control-button"
-                    onClick={handleEnterOnClick(routes[props.indexOfSelectedRoute].path)}
+                    onClick={handleEnterOnClick}
                 >
                     ENTER
                 </span>
@@ -45,4 +44,4 @@ function Console(props) {
     );
 }
 
-export default Console;
+export default withRouter(Console);
