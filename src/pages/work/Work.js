@@ -15,7 +15,7 @@ function Work() {
     Object.entries(projects).map( ([key, value]) => {
             links.push(
                 <li key={`link_${key}`}>
-                    <Link to={`${path}/${value.id}`}>{value.name}</Link>
+                    <Link to={`${path}/${value.id}`}>• {value.name}</Link>
                 </li>
             )
             routes.push(

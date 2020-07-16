@@ -15,7 +15,7 @@ function Art() {
     Object.entries(themes).map( ([key,value]) => {
             links.push(
                 <li key={`link_${key}`}>
-                    <Link to={`${path}/${key}`}>{key}</Link>
+                    <Link to={`${path}/${key}`}>• {key}</Link>
                 </li>
             )
             routes.push(
@@ -36,7 +36,7 @@ function Art() {
         <div className="Art">
             <Switch>
                 <Route exact path={path}>
-                    <h3>The explicable and inexplicables</h3>
+                    <h3>Art - The Explicables and Inexplicables</h3>
                     <ul>
                         {links}
                     </ul>

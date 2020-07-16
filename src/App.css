@@ -42,6 +42,11 @@ html, body {
   overflow: scroll;
 }
 
+/* padding for contents on screen */
+.content>* {
+  padding: 1em;
+}
+
 /* .banner {
   width: 320px;
   padding: 10px 30px;
