@@ -27,7 +27,9 @@ function NavBar(props) {
     routesJSX.push(
       <li 
         key={`${route.name}`}
-        className={getNavItemSelectedClass(index)}>
+        className={getNavItemSelectedClass(index)}
+        onMouseEnter={props.handleMouseSelectNavItem(index)}
+      > 
         <Link to={route.path}>
           <span 
             className={`greater-than ${getNavItemVisibilityClass(index)}`}

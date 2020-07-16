@@ -35,6 +35,10 @@ function App() {
       setIndexOfSelectedRoute(0);
     }
   }
+  const handleMouseSelectNavItem = (index) => () => {
+    if(isMenuOpened)
+      setIndexOfSelectedRoute(index);
+  }
 
   return (
     <div className="App">
@@ -54,6 +58,7 @@ function App() {
                 <NavBar 
                   isMenuOpened={isMenuOpened}
                   indexOfSelectedRoute={indexOfSelectedRoute}
+                  handleMouseSelectNavItem={handleMouseSelectNavItem}
                 />
           </div>
         </div>
