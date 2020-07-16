@@ -1,3 +1,7 @@
+.typewriter {
+  display: inline-block;  /* make div to as wide as content */
+  padding-left: 1em;
+}
 .typewriter #hello-world {
   /* Ensures the content is not revealed until the animation */
   overflow: hidden; 
