@@ -25,7 +25,7 @@ function NavBar(props) {
 
   for (let [index, route] of routes.entries()) {
     routesJSX.push(
-      <li 
+      <li
         key={`${route.name}`}
         className={getNavItemSelectedClass(index)}
         onMouseEnter={props.handleMouseSelectNavItem(index)}

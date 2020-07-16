@@ -55,24 +55,26 @@ function App() {
                   <Route path="*"> 404 </Route>
                 </Switch>
                 
-                <NavBar 
-                  isMenuOpened={isMenuOpened}
-                  indexOfSelectedRoute={indexOfSelectedRoute}
-                  handleMouseSelectNavItem={handleMouseSelectNavItem}
-                />
+                
           </div>
         </div>
 
         {/* <div className="banner">
           majiasheng
         </div> */}
-
-        <Console
-          indexOfSelectedRoute={indexOfSelectedRoute}
-          handleSelectOnClick={handleSelectOnClick}
-          handleBOnClick={handleBOnClick}
-          isMenuOpened={isMenuOpened}
+        <div className="console-wrapper">
+          <NavBar
+            isMenuOpened={isMenuOpened}
+            indexOfSelectedRoute={indexOfSelectedRoute}
+            handleMouseSelectNavItem={handleMouseSelectNavItem}
           />
+          <Console
+            indexOfSelectedRoute={indexOfSelectedRoute}
+            handleSelectOnClick={handleSelectOnClick}
+            handleBOnClick={handleBOnClick}
+            isMenuOpened={isMenuOpened}
+            />
+        </div>
       </Router>
     </div>
   );

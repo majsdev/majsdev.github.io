@@ -1,8 +1,15 @@
 .menu {
-  position: absolute;
-  bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
 
-  width: 320px;
+  background-color: #eee;
+  
+  position: absolute;
+  top: -60px;
+  left: 30.5px;  /* (width_of_container - width_of_content)/2 */
+
+  width: 323px;
+  z-index: 1;
 }
 
 /* list */
