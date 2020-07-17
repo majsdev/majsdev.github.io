@@ -20,6 +20,8 @@ import { NUMBER_OF_ROUTES } from './routes';
 function App() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [indexOfSelectedRoute, setIndexOfSelectedRoute] = useState(0);
+  const [numOfSelectableItems, setNumOfSelectableItems] = useState(0);  /* doubles as indicator of arrow selectable items on the screen */
+  const [indexOfSelectableItem, setIndexOfSelectableItem] = useState(0);
   const closeMenu = () => setIsMenuOpened(false);
   const openMenu = () => setIsMenuOpened(true);
   const handleSelectOnClick = () => {
@@ -39,29 +41,58 @@ function App() {
     if(isMenuOpened)
       setIndexOfSelectedRoute(index);
   }
+  const handleUpArrowOnClick = () => {
+    if(!isMenuOpened && numOfSelectableItems > 0) {
+      /* + numOfSelectableItems because negative number mod positive number will return negative */
+      setIndexOfSelectableItem((indexOfSelectableItem-1+numOfSelectableItems)%numOfSelectableItems);
+    }
+  }
+  const handleDownArrowOnClick = () => {
+    if(!isMenuOpened && numOfSelectableItems > 0)
+      setIndexOfSelectableItem((indexOfSelectableItem+1)%numOfSelectableItems);
+  }
 
   return (
     <div className="App">
-
       <Router>
         <div className="container">
           <div className="content">
                 <Switch>
-                  <Route exact path="/"> <Home /> </Route>
-                  <Route path="/about"> <About /> </Route>
-                  <Route path="/art"> <Art /> </Route>
-                  <Route path="/note"> <Note /> </Route>
-                  <Route path="/work"> <Work /> </Route>
+                  <Route exact path="/">
+                    <Home
+                      setNumOfSelectableItems={setNumOfSelectableItems}
+                    />
+                  </Route>
+                  <Route path="/about">
+                    <About
+                      setNumOfSelectableItems={setNumOfSelectableItems}
+                    />
+                  </Route>
+                  <Route path="/art">
+                    <Art
+                      setNumOfSelectableItems={setNumOfSelectableItems}
+                      indexOfSelectableItem={indexOfSelectableItem}
+                    />
+                  </Route>
+                  <Route path="/note">
+                    <Note
+                      setNumOfSelectableItems={setNumOfSelectableItems}
+                    />
+                  </Route>
+                  <Route path="/work">
+                    <Work
+                      setNumOfSelectableItems={setNumOfSelectableItems}
+                    />
+                  </Route>
                   <Route path="*"> 404 </Route>
                 </Switch>
-                
-                
           </div>
         </div>
 
         {/* <div className="banner">
           majiasheng
         </div> */}
+
         <div className="console-wrapper">
           <NavBar
             isMenuOpened={isMenuOpened}
@@ -73,7 +104,9 @@ function App() {
             handleSelectOnClick={handleSelectOnClick}
             handleBOnClick={handleBOnClick}
             isMenuOpened={isMenuOpened}
-            />
+            handleUpArrowOnClick={handleUpArrowOnClick}
+            handleDownArrowOnClick={handleDownArrowOnClick}
+          />
         </div>
       </Router>
     </div>

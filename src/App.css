@@ -148,3 +148,16 @@ html, body {
   color: black;
   background-color: white;
 }
+
+.selected-item {
+  color: white;
+  background-color: black;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
