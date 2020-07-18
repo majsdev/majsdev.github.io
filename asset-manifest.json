@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/majiasheng-react/static/css/main.678cc6b4.chunk.css",
+    "main.js": "/majiasheng-react/static/js/main.60356b2f.chunk.js",
+    "main.js.map": "/majiasheng-react/static/js/main.60356b2f.chunk.js.map",
+    "runtime-main.js": "/majiasheng-react/static/js/runtime-main.b997415b.js",
+    "runtime-main.js.map": "/majiasheng-react/static/js/runtime-main.b997415b.js.map",
+    "static/js/2.d71749cd.chunk.js": "/majiasheng-react/static/js/2.d71749cd.chunk.js",
+    "static/js/2.d71749cd.chunk.js.map": "/majiasheng-react/static/js/2.d71749cd.chunk.js.map",
+    "index.html": "/majiasheng-react/index.html",
+    "precache-manifest.120aa6acfea179b7a71c0eab8733371a.js": "/majiasheng-react/precache-manifest.120aa6acfea179b7a71c0eab8733371a.js",
+    "service-worker.js": "/majiasheng-react/service-worker.js",
+    "static/css/main.678cc6b4.chunk.css.map": "/majiasheng-react/static/css/main.678cc6b4.chunk.css.map",
+    "static/js/2.d71749cd.chunk.js.LICENSE.txt": "/majiasheng-react/static/js/2.d71749cd.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/majiasheng-react/static/media/PressStart2P-Regular.2c404fd0.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b997415b.js",
+    "static/js/2.d71749cd.chunk.js",
+    "static/css/main.678cc6b4.chunk.css",
+    "static/js/main.60356b2f.chunk.js"
+  ]
+}
