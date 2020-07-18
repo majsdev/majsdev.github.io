@@ -3,7 +3,7 @@ import React from 'react';
 function Note() {
   return (
     <div className="Note">
-        Note
+        <h3>Note</h3>
     </div>
   );
 }
