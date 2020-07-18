@@ -1,7 +1,8 @@
 const precarious = [
   {
-    location: '',
-    note: 'percarious #1'
+    imageLocation: '',
+    note: 'precarious #1',
+    date: '2017-12-01'
   }
 ];
 

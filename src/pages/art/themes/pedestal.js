@@ -1,7 +1,8 @@
 const pedestal = [
   {
-    location: '',
-    note: 'pedestal #1'
+    imageLocation: '',
+    note: 'pedestal #1',
+    date: '2017-12-01'
   }
 ];
 

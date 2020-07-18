@@ -9,6 +9,7 @@ import * as themes from './themes';
 import {
     SELECTED_ITEM
 } from '../includes/cssClasses'; 
+import ArtDisplay from './ArtDisplay';
 
 function Art(props) {
     let { path } = useRouteMatch();
@@ -34,7 +35,10 @@ function Art(props) {
             )
             routes.push(
                 <Route path={`${path}/${key}`} key={`route_${key}`} >
-                    replace with generic art component witht "{key}" content
+                    <ArtDisplay 
+                        artThemeName={key}
+                        artThemeValues={value}
+                    />
                 </Route>
             )
             index++;

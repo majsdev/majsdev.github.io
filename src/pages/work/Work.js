@@ -5,7 +5,8 @@ import {
     Route,
     Link,
     useRouteMatch
-  } from "react-router-dom";
+} from "react-router-dom";
+import WorkDisplay from './WorkDisplay';
 
 function Work() {
     let { path } = useRouteMatch();
@@ -20,8 +21,9 @@ function Work() {
             )
             routes.push(
                 <Route path={`${path}/${value.id}`} key={`route_${key}`} >
-                    replace with generic work component with "{key}" content<br/><br/>
-                    <div>{value.desc}</div>
+                    <WorkDisplay
+                        work={value}
+                    />
                 </Route>
             )
         }
