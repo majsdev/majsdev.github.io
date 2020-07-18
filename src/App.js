@@ -84,7 +84,7 @@ function App() {
                       setNumOfSelectableItems={setNumOfSelectableItems}
                     />
                   </Route>
-                  <Route path="*"> 404 </Route>
+                  <Route path="*"><h3>404</h3></Route>
                 </Switch>
           </div>
         </div>
