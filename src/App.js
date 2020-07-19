@@ -82,6 +82,7 @@ function App() {
                   <Route path="/work">
                     <Work
                       setNumOfSelectableItems={setNumOfSelectableItems}
+                      indexOfSelectableItem={indexOfSelectableItem}
                     />
                   </Route>
                   <Route path="*"> 404 </Route>
