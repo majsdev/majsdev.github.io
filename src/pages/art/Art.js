@@ -21,18 +21,18 @@ function Art(props) {
         return () => {
             props.setNumOfSelectableItems(0);
         }
-    })
+    });
 
     let index = 0;
     Object.entries(themes).map( ([key,value]) => {
             links.push(
                 <li
                     key={`link_${key}`}
-                    className={`${props.indexOfSelectableItem === index ? SELECTED_ITEM: ''}`}
+                    className={`${props.indexOfSelectableItem === index ? SELECTED_ITEM : ''}`}
                 >
                     <Link to={`${path}/${key}`}>• {key}</Link>
                 </li>
-            )
+            );
             routes.push(
                 <Route path={`${path}/${key}`} key={`route_${key}`} >
                     <ArtDisplay 
@@ -40,7 +40,7 @@ function Art(props) {
                         artThemeValues={value}
                     />
                 </Route>
-            )
+            );
             index++;
         }
     )
