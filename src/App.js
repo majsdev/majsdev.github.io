@@ -71,6 +71,7 @@ function App() {
                   <Route path="/art">
                     <Art
                       setNumOfSelectableItems={setNumOfSelectableItems}
+                      setIndexOfSelectableItem={setIndexOfSelectableItem}
                       indexOfSelectableItem={indexOfSelectableItem}
                     />
                   </Route>
@@ -82,6 +83,7 @@ function App() {
                   <Route path="/work">
                     <Work
                       setNumOfSelectableItems={setNumOfSelectableItems}
+                      setIndexOfSelectableItem={setIndexOfSelectableItem}
                       indexOfSelectableItem={indexOfSelectableItem}
                     />
                   </Route>
