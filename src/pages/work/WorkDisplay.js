@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 /**
- * work: { 
+ * work: {
  *      name: 'Twitter Clone',
  *      id: 'twitter-clone',
  *      link: '',
@@ -11,15 +11,14 @@ import React from 'react';
  * }
  */
 function WorkDisplay({ work }) {
-
-    return (
-        <div className="WorkDisplay">
-            <h4>{work.name}</h4>
-            <div className="work-display-body">
-                Coming soon
-            </div>
-        </div>
-    );
+  return (
+    <div className="WorkDisplay">
+      <h4>{work.name}</h4>
+      <div className="work-display-body">
+        {/* <img src={require(`${work.thumbNail}`)} alt={work.name}></img> */}
+      </div>
+    </div>
+  );
 }
 
 export default WorkDisplay;
