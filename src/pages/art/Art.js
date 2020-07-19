@@ -23,7 +23,7 @@ class Art extends React.Component {
     }
 
     render() {
-        let { path } = this.props.match; /* `match` is from `withRouter` */
+        let { path } = this.props.match;  /* `match` is from `withRouter` */
         let links = [];
         let routes = [];
 
