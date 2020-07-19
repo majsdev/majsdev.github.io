@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
     Switch,
     Route,
     Link,
-    useRouteMatch
+    withRouter
   } from "react-router-dom";
 import * as themes from './themes';
 import {
@@ -11,61 +11,68 @@ import {
 } from '../includes/cssClasses'; 
 import ArtDisplay from './ArtDisplay';
 
-function Art(props) {
-    let { path } = useRouteMatch();
-    let links = [];
-    let routes = [];
+class Art extends React.Component {
 
-    useEffect(() => {
-        props.setNumOfSelectableItems(Object.entries(themes).length);
-        return () => {
-            props.setNumOfSelectableItems(0);
-        }
-    });
+    componentDidMount() {
+        this.props.setNumOfSelectableItems(Object.entries(themes).length);
+    }
 
-    let index = 0;
-    Object.entries(themes).map( ([key,value]) => {
-            links.push(
-                <li
-                    key={`link_${key}`}
-                    className={`${props.indexOfSelectableItem === index ? SELECTED_ITEM : ''}`}
-                >
-                    <Link to={`${path}/${key}`}>• {key}</Link>
-                </li>
-            );
-            routes.push(
-                <Route path={`${path}/${key}`} key={`route_${key}`} >
-                    <ArtDisplay 
-                        artThemeName={key}
-                        artThemeValues={value}
-                    />
-                </Route>
-            );
-            index++;
-        }
-    )
+    componentWillUnmount() {
+        this.props.setNumOfSelectableItems(0);
+        this.props.setIndexOfSelectableItem(0);
+    }
 
-    routes.push(
-        <Route path={`${path}/*`} key={`route_404`} >
-            404
-        </Route>
-    )
+    render() {
+        let { path } = this.props.match; /* `match` is from `withRouter` */
+        let links = [];
+        let routes = [];
 
-    return (
-        <div className="Art">
-            <Switch>
-                <Route exact path={path}>
-                    <h3>Art - The Explicables and Inexplicables</h3>
-                    <ul className="inline-block">
-                        {links}
-                    </ul>
-                </Route>
+        let index = 0;
+        Object.entries(themes).map( ([key,value]) => {
+                links.push(
+                    <li
+                        key={`link_${key}`}
+                        className={`${this.props.indexOfSelectableItem === index ? SELECTED_ITEM : ''}`}
+                    >
+                        <Link to={`${path}/${key}`}>• {key}</Link>
+                    </li>
+                );
+                routes.push(
+                    <Route path={`${path}/${key}`} key={`route_${key}`} >
+                        <ArtDisplay 
+                            artThemeName={key}
+                            artThemeValues={value}
+                        />
+                    </Route>
+                );
+                index++;
+            }
+        )
 
-                {routes}
-                
-            </Switch>
-        </div>
-    );
+        routes.push(
+            <Route path={`${path}/*`} key={`route_404`} >
+                404
+            </Route>
+        )
+
+        return (
+            <div className="Art">
+                <Switch>
+                    <Route exact path={path}>
+                        <h3>Art - The Explicables and Inexplicables</h3>
+                        <ul className="inline-block">
+                            {links}
+                        </ul>
+                    </Route>
+
+                    {routes}
+                    
+                </Switch>
+            </div>
+        );
+    }
+
+    
 }
 
-export default Art;
+export default withRouter(Art);
