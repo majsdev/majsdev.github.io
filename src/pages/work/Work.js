@@ -1,69 +1,74 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import projects from './projects';
 import {
     Switch,
     Route,
     Link,
-    useRouteMatch
+    withRouter
 } from "react-router-dom";
 import {
     SELECTED_ITEM
 } from '../includes/cssClasses'; 
 import WorkDisplay from './WorkDisplay';
 
-function Work(props) {
-    let { path } = useRouteMatch();
-    let links = [];
-    let routes = [];
+class Work extends React.Component {
 
-    useEffect(() => {
-        props.setNumOfSelectableItems(Object.entries(projects).length);
-        return () => {
-            props.setNumOfSelectableItems(0);
-        }
-    });
+    componentDidMount() {
+        this.props.setNumOfSelectableItems(Object.entries(projects).length);
+    }
 
-    let index = 0;
-    Object.entries(projects).map( ([key, value]) => {
-            links.push(
-                <li
-                    key={`link_${key}`}
-                    className={`${props.indexOfSelectableItem === index ? SELECTED_ITEM : ''}`}
-                >
-                    <Link to={`${path}/${value.id}`}>• {value.name}</Link>
-                </li>
-            );
-            routes.push(
-                <Route path={`${path}/${value.id}`} key={`route_${key}`} >
-                    <WorkDisplay
-                        work={value}
-                    />
-                </Route>
-            );
-            index++;
-        }
-    )
-    routes.push(
-        <Route path={`${path}/*`} key={`route_404`} >
-            404
-        </Route>
-    )
+    componentWillUnmount() {
+        this.props.setNumOfSelectableItems(0);
+        this.props.setIndexOfSelectableItem(0);
+    }
 
-    return (
-        <div className="Work">
-            <Switch>
-                <Route exact path={path}>
-                    <h3>Projects and work items</h3>
-                    <ul className="inline-block">
-                        {links}
-                    </ul>
-                </Route>
+    render() {
+        let { path } = this.props.match;  /* `match` is from `withRouter` */
+        let links = [];
+        let routes = [];
 
-                {routes}
-                
-            </Switch>
-        </div>
-    );
+        let index = 0;
+        Object.entries(projects).map( ([key, value]) => {
+                links.push(
+                    <li
+                        key={`link_${key}`}
+                        className={`${this.props.indexOfSelectableItem === index ? SELECTED_ITEM : ''}`}
+                    >
+                        <Link to={`${path}/${value.id}`}>• {value.name}</Link>
+                    </li>
+                );
+                routes.push(
+                    <Route path={`${path}/${value.id}`} key={`route_${key}`} >
+                        <WorkDisplay
+                            work={value}
+                        />
+                    </Route>
+                );
+                index++;
+            }
+        )
+        routes.push(
+            <Route path={`${path}/*`} key={`route_404`} >
+                404
+            </Route>
+        )
+
+        return (
+            <div className="Work">
+                <Switch>
+                    <Route exact path={path}>
+                        <h3>Projects and work items</h3>
+                        <ul className="inline-block">
+                            {links}
+                        </ul>
+                    </Route>
+
+                    {routes}
+                    
+                </Switch>
+            </div>
+        );
+    }
 }
 
-export default Work;
+export default withRouter(Work);
