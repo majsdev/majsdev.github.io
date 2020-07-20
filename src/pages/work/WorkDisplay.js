@@ -32,7 +32,7 @@ function WorkDisplay({ work }) {
           />
         )}
 
-        <p class="desc" v-html="desc">
+        <p class="desc">
           {desc}
         </p>
         <div class="tech-stack">{techStackJSX}</div>

@@ -28,7 +28,7 @@ class Work extends React.Component {
             this.props.indexOfSelectableItem === index ? SELECTED_ITEM : ""
           }`}
         >
-          <Link to={`${path}/${value.id}`}>• {value.name}</Link>
+          <Link to={`${path}/${value.id}`}  className="selectable-item">• {value.name}</Link>
         </li>
       );
       routes.push(
