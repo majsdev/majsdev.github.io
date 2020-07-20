@@ -21,7 +21,7 @@ export default {
     id: 'track-me',
     link: '',
     techStack:  ['Android', 'Java'],
-    thumbNail: '../../images/projects/trackMe/route-traveled.png',
+    thumbNail: 'trackMe/route-traveled.png',
     desc: 'Android application that can track travel itinerary and provide route predictions.',
     dateOrStatus: '05/2018',
   },
@@ -31,23 +31,23 @@ export default {
     link: '',
     techStack: ['Java', 'SpringMVC', 'MySQL', 'JPA'],
     dateOrStatus: '09/2017 -- 12/2017',
-    thumbNail: '../../images/projects/rgm/1.png',
+    thumbNail: 'rgm/1.png',
     desc: 'Gerrymandering is the manipulation of district boundaries to provide political advantage to a party.<br>This tool uses demographic, geospatial and election data and employs various metrics to analyze whether a voting district has been gerrymandered.',
     images: [
       {
-        location: '../../images/projects/rgm/1.png',
+        relativePath: 'rgm/1.png',
         name: 'home'
       },
       {
-        location: '../../images/projects/rgm/2.png',
+        relativePath: 'rgm/2.png',
         name: 'ny-2016'
       },
       {
-        location: '../../images/projects/rgm/3.png',
+        relativePath: 'rgm/3.png',
         name: 'ny-2016-efficiency-gap-test'
       },
       {
-        location: '../../images/projects/rgm/4.png',
+        relativePath: 'rgm/4.png',
         name: 'super-districting'
       },
     ]
@@ -59,14 +59,14 @@ export default {
     techStack: ['MIPS Assembly'],
     dateOrStatus: '11/2015',
     desc: 'MS-DOS style game written in MISP assembly.<br>Gotta keep the lawn well groomed. 🐮',
-    thumbNail: '../../images/projects/lmw/1.gif',
+    thumbNail: 'lmw/1.gif',
     images: [
       {
-        location: '../../images/projects/lmw/1.gif',
+        relativePath: 'lmw/1.gif',
         name: 'hi'
       },
       {
-        location: '../../images/projects/lmw/1.png',
+        relativePath: 'lmw/1.png',
         name: 'map'
       }
     ]
@@ -77,15 +77,15 @@ export default {
     link: '',
     techStack: ['Linux', 'MySQL', 'Apache', 'PHP'],
     dateOrStatus: '07/2017-08/2017',
-    thumbNail: '../../images/projects/fb/1.png',
+    thumbNail: 'fb/1.png',
     desc: '',
     images: [
       {
-        location: '../../images/projects/fb/1.png',
+        relativePath: 'fb/1.png',
         name: 'home'
       },
       {
-        location: '../../images/projects/fb/2.png',
+        relativePath: 'fb/2.png',
         name: 'profile'
       }
     ]
@@ -97,22 +97,22 @@ export default {
     techStack: ['Java'],
     dateOrStatus: '03/2016 -- 05/2016',
     desc: 'A simplified version of <a style="color: violet;" href="http://alexdp.free.fr/violetumleditor/page.php?id=en:tour" target="_blank" id="violet-uml-link">Violet UML Editor</a>. It can generate compilable java skeleton code from the UML design. ',
-    thumbNail: '../../images/projects/jcd/1.png',
+    thumbNail: 'jcd/1.png',
     images: [
       {
-        location: '../../images/projects/jcd/1.png',
+        relativePath: 'jcd/1.png',
         name: 'add-subclass'
       },
       {
-        location: '../../images/projects/jcd/2.png',
+        relativePath: 'jcd/2.png',
         name: 'export-code'
       },
       {
-        location: '../../images/projects/jcd/3.png',
+        relativePath: 'jcd/3.png',
         name: 'exported-code1'
       },
       {
-        location: '../../images/projects/jcd/4.png',
+        relativePath: 'jcd/4.png',
         name: 'exported-code2'
       },
     ]
