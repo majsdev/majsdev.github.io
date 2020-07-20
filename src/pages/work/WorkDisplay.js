@@ -1,4 +1,5 @@
 import React from "react";
+import './WorkDisplay.css';
 
 /**
  * work: {
@@ -10,22 +11,31 @@ import React from "react";
  *      dateOrStatus: '03/2018 -- 05/2018'
  * }
  */
+
 function WorkDisplay({ work }) {
   const { id, name, desc, techStack } = work;
   let techStackJSX = [];
-  for (const [index, tech] of Object.entries(techStack) ) {
+  for (const [index, tech] of Object.entries(techStack)) {
     techStackJSX.push(<span key={`tech-stack-${id}-${index}`}>{tech}</span>);
   }
 
   return (
     <div className="WorkDisplay">
-      <h4>{name}</h4>
+      <h4 className="displayName">{name}</h4>
       <div className="work-display-body">
-        {/* <img src={require(`${work.thumbNail}`)} alt={work.name}></img> */}
-        <p class="desc" v-html="desc">{desc}</p>
-        <div class="tech-stack">
-          {techStackJSX}
-        </div>
+        {/* NOTE: path for image is not stored in a variable is because react doesn't resolve it */}
+        {work.thumbNail !== undefined && (
+          <img
+            className="project-image"
+            src={require(`../../images/projects/${work.thumbNail}`)}
+            alt={work.name}
+          />
+        )}
+
+        <p class="desc" v-html="desc">
+          {desc}
+        </p>
+        <div class="tech-stack">{techStackJSX}</div>
       </div>
     </div>
   );

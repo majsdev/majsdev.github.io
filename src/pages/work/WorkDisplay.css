@@ -1,0 +1,30 @@
+.displayName {
+    position: sticky;
+    top: 1em;
+    left: 1em;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tech-stack::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.tech-stack {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.tech-stack {
+  overflow: scroll;
+  font-size: 1em;
+}
+
+.tech-stack > * {
+  margin: 0 10px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+}
