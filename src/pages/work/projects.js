@@ -13,7 +13,7 @@ export default {
     id: 'twitter-clone',
     link: '',
     techStack:  ['Nginx', 'NodeJs', 'MongoDB', 'Cassandra', 'RabbitMQ'],
-    desc: 'Able to withstand over one million read/write requests per hour given limited resources.',
+    desc: 'Architecturally able to withstand over one million read/write requests per hour given limited resources.',
     dateOrStatus: '03/2018 -- 05/2018'
   },
   trackMe: {

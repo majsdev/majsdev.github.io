@@ -34,7 +34,7 @@ function NavBar(props) {
           <span 
             className={`greater-than ${getNavItemVisibilityClass(index)}`}
           >
-            <span>&gt;</span>
+            <span>▶︎</span>
           </span>
           {route.name}
         </Link>
@@ -44,7 +44,7 @@ function NavBar(props) {
 
   return (
     <div className={`NavBar menu ${getNavBarVisibilityClass()}`}>
-        <ul id="nav-items">{routesJSX}</ul>
+        <ul className="nav-items">{routesJSX}</ul>
     </div>
   );
 }

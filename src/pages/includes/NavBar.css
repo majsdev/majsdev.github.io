@@ -1,7 +1,4 @@
 .menu {
-  display: flex;
-  justify-content: space-evenly;
-
   background-color: #eee;
   
   position: absolute;
@@ -10,6 +7,11 @@
 
   width: 323px;
   z-index: 1;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* list */
