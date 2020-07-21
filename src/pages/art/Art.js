@@ -7,6 +7,7 @@ import ArtDisplay from "./ArtDisplay";
 class Art extends React.Component {
   componentDidMount() {
     this.props.setNumOfSelectableItems(Object.entries(themes).length);
+    this.props.setRouteOfSelectableItems(Object.keys(themes).map(key => `${this.props.match.path}/${key}`));
   }
 
   componentWillUnmount() {
@@ -16,12 +17,12 @@ class Art extends React.Component {
 
   render() {
     let { path } = this.props.match; /* `match` is from `withRouter` */
-    let links = [];
-    let routes = [];
+    let linksJSX = [];
+    let routesJSX = [];
 
     let index = 0;
     Object.entries(themes).map(([key, value]) => {
-      links.push(
+      linksJSX.push(
         <li
           key={`link_${key}`}
           className={`${
@@ -31,7 +32,7 @@ class Art extends React.Component {
           <Link to={`${path}/${key}`}>• {key}</Link>
         </li>
       );
-      routes.push(
+      routesJSX.push(
         <Route path={`${path}/${key}`} key={`route_${key}`}>
           <ArtDisplay artThemeName={key} artThemeValues={value} />
         </Route>
@@ -39,7 +40,7 @@ class Art extends React.Component {
       index++;
     });
 
-    routes.push(
+    routesJSX.push(
       <Route path={`${path}/*`} key={`route_404`}>
         404
       </Route>
@@ -50,10 +51,10 @@ class Art extends React.Component {
         <Switch>
           <Route exact path={path}>
             <h3>Art - The Explicables and Inexplicables</h3>
-            <ul className="inline-block">{links}</ul>
+            <ul className="inline-block">{linksJSX}</ul>
           </Route>
 
-          {routes}
+          {routesJSX}
         </Switch>
       </div>
     );

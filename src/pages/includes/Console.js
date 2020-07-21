@@ -9,6 +9,10 @@ function Console(props) {
         if (props.isMenuOpened)
             props.history.push(routes[props.indexOfSelectedRoute].path);
     }
+    const handleAOnClick = () => {
+        if (!props.isMenuOpened && props.numOfSelectableItems > 0)
+            props.history.push(props.routeOfSelectableItems[props.indexOfSelectableItem]);
+    }
     return (
         <div className="console">
             <div className="up">
@@ -45,7 +49,7 @@ function Console(props) {
                     ENTER
                 </span>
             </div>
-            <div className="A"><span className="console-item action-button">A</span></div>
+            <div className="A" onClick={handleAOnClick}><span className="console-item action-button">A</span></div>
             <div className="B">
                 <span
                     className="console-item action-button"
