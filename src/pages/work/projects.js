@@ -58,7 +58,7 @@ export default {
     link: '',
     techStack: ['MIPS Assembly'],
     dateOrStatus: '11/2015',
-    desc: 'MS-DOS style game written in MISP assembly.<br>Gotta keep the lawn well groomed. 🐮',
+    desc: 'MS-DOS style game written in MISP assembly.',
     thumbNail: 'lmw/1.gif',
     images: [
       {
@@ -71,32 +71,32 @@ export default {
       }
     ]
   },
-  fb: {
-    name: 'Facebook Clone',
-    id:'fb',
-    link: '',
-    techStack: ['Linux', 'MySQL', 'Apache', 'PHP'],
-    dateOrStatus: '07/2017-08/2017',
-    thumbNail: 'fb/1.png',
-    desc: '',
-    images: [
-      {
-        relativePath: 'fb/1.png',
-        name: 'home'
-      },
-      {
-        relativePath: 'fb/2.png',
-        name: 'profile'
-      }
-    ]
-  },
+  // fb: {
+  //   name: 'Facebook Clone',
+  //   id:'fb',
+  //   link: '',
+  //   techStack: ['Linux', 'MySQL', 'Apache', 'PHP'],
+  //   dateOrStatus: '07/2017-08/2017',
+  //   thumbNail: 'fb/1.png',
+  //   desc: '',
+  //   images: [
+  //     {
+  //       relativePath: 'fb/1.png',
+  //       name: 'home'
+  //     },
+  //     {
+  //       relativePath: 'fb/2.png',
+  //       name: 'profile'
+  //     }
+  //   ]
+  // },
   jcd: {
     name: 'JClassDesigner',
     id:'jcd',
     link: '',
     techStack: ['Java'],
     dateOrStatus: '03/2016 -- 05/2016',
-    desc: 'A simplified version of <a style="color: violet;" href="http://alexdp.free.fr/violetumleditor/page.php?id=en:tour" target="_blank" id="violet-uml-link">Violet UML Editor</a>. It can generate compilable java skeleton code from the UML design. ',
+    desc: 'A simplified version of <a href="http://alexdp.free.fr/violetumleditor/page.php?id=en:tour" target="_blank" id="violet-uml-link">Violet UML Editor</a>. It can generate compilable java skeleton code from the UML design. ',
     thumbNail: 'jcd/1.png',
     images: [
       {
