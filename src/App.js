@@ -7,9 +7,9 @@ import { NUMBER_OF_ROUTES } from "./routes";
 function App() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [indexOfSelectedRoute, setIndexOfSelectedRoute] = useState(0);
-  const [numOfSelectableItems, setNumOfSelectableItems] = useState(
-    0
-  ); /* doubles as indicator of arrow selectable items on the screen */
+  /* doubles as indicator of arrow selectable items on the screen */
+  const [numOfSelectableItems, setNumOfSelectableItems] = useState(0);
+  const [routeOfSelectableItems, setRouteOfSelectableItems] = useState('#');
   const [indexOfSelectableItem, setIndexOfSelectableItem] = useState(0);
   const closeMenu = () => setIsMenuOpened(false);
   const openMenu = () => setIsMenuOpened(true);
@@ -61,6 +61,7 @@ function App() {
                 <Art
                   setNumOfSelectableItems={setNumOfSelectableItems}
                   setIndexOfSelectableItem={setIndexOfSelectableItem}
+                  setRouteOfSelectableItems={setRouteOfSelectableItems}
                   indexOfSelectableItem={indexOfSelectableItem}
                 />
               </Route>
@@ -71,6 +72,7 @@ function App() {
                 <Work
                   setNumOfSelectableItems={setNumOfSelectableItems}
                   setIndexOfSelectableItem={setIndexOfSelectableItem}
+                  setRouteOfSelectableItems={setRouteOfSelectableItems}
                   indexOfSelectableItem={indexOfSelectableItem}
                 />
               </Route>
@@ -96,6 +98,9 @@ function App() {
             isMenuOpened={isMenuOpened}
             handleUpArrowOnClick={handleUpArrowOnClick}
             handleDownArrowOnClick={handleDownArrowOnClick}
+            numOfSelectableItems={numOfSelectableItems}
+            routeOfSelectableItems={routeOfSelectableItems}
+            indexOfSelectableItem={indexOfSelectableItem}
           />
         </div>
       </Router>
