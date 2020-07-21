@@ -1,3 +1,7 @@
+.WorkDisplay {
+  line-height: 1.6;
+}
+
 .displayName {
     position: sticky;
     top: 1em;
