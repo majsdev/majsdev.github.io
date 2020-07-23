@@ -48,9 +48,9 @@ class Art extends React.Component {
 
     return (
       <div className="Art">
+        <h3>Art - The Explicables and Inexplicables</h3>
         <Switch>
           <Route exact path={path}>
-            <h3>Art - The Explicables and Inexplicables</h3>
             <ul className="inline-block">{linksJSX}</ul>
           </Route>
 
