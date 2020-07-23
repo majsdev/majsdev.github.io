@@ -46,9 +46,9 @@ class Work extends React.Component {
 
     return (
       <div className="Work">
+        <h3>Projects</h3>
         <Switch>
           <Route exact path={path}>
-            <h3>Projects and work items</h3>
             <ul className="inline-block">{links}</ul>
           </Route>
 
