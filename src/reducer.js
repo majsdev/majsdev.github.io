@@ -1,11 +1,16 @@
 import { NUMBER_OF_ROUTES } from "./routes";
 
 const reducer = (state, action) => {
-  const { isMenuOpened, numOfSelectableItems, indexOfSelectedRoute, indexOfSelectableItem } = state;
+  const {
+    isMenuOpened,
+    numOfSelectableItems,
+    indexOfSelectedRoute,
+    indexOfSelectableItem,
+  } = state;
   switch (action.type) {
     case "SELECT":
       if (!isMenuOpened) {
-        console.dir(state)
+        console.dir(state);
         return {
           ...state,
           isMenuOpened: true,
@@ -14,8 +19,7 @@ const reducer = (state, action) => {
       } else {
         return {
           ...state,
-          indexOfSelectedRoute:
-            (indexOfSelectedRoute + 1) % NUMBER_OF_ROUTES,
+          indexOfSelectedRoute: (indexOfSelectedRoute + 1) % NUMBER_OF_ROUTES,
         };
       }
     case "MOUSE_SELECT":
@@ -25,16 +29,17 @@ const reducer = (state, action) => {
           indexOfSelectedRoute: action.index,
         };
       }
+      break;
     case "ENTER":
       return state;
-    case "B":
-      if (isMenuOpened) {
-        return {
-          ...state,
-          isMenuOpened: false,
-          indexOfSelectedRoute: 0
-        }
-      }
+    case "CLOSE_MENU" /* B */:
+      return {
+        ...state,
+        isMenuOpened: false,
+        indexOfSelectedRoute: 0,
+      };
+    case "BACK" /* B */:
+      return state;
     case "A":
       return state;
     case "UP":
@@ -48,6 +53,7 @@ const reducer = (state, action) => {
             numOfSelectableItems,
         };
       }
+      break;
     case "DOWN":
       if (!isMenuOpened && numOfSelectableItems > 0) {
         return {
@@ -56,10 +62,26 @@ const reducer = (state, action) => {
             (indexOfSelectableItem + 1) % numOfSelectableItems,
         };
       }
+      break;
     case "LEFT":
       return state;
     case "RIGHT":
       return state;
+    case "SET_NUM_OF_SELECTABLE_ITEMS":
+      return {
+        ...state,
+        numOfSelectableItems: action.numOfSelectableItems,
+      };
+    case "SET_ROUTES_OF_SELECTABLE_ITEMS":
+      return {
+        ...state,
+        routesOfSelectableItems: [...action.routesOfSelectableItems],
+      };
+    case "SET_INDEX_OF_SELECTABLE_ITEM":
+      return {
+        ...state,
+        indexOfSelectableItem: action.indexOfSelectableItem,
+      };
     default:
       return state;
   }
