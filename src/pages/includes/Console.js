@@ -11,19 +11,40 @@ function Console(props) {
       props.history.push(routes[screenItems.indexOfSelectedRoute].path);
   };
   const handleAOnClick = () => {
-    if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0)
+    if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0) {
       props.history.push(
-        screenItems.routeOfSelectableItems[screenItems.indexOfSelectableItem]
+        screenItems.routesOfSelectableItems[screenItems.indexOfSelectableItem]
       );
+    }
+    // TODO: add rounte to stack for B to later navigate back
+  };
+  const handleBOnClick = () => {
+    if (screenItems.isMenuOpened) {
+      dispatch({
+        type: "CLOSE_MENU",
+      });
+    }
+  };
+  const handleUpOnClick = () => {
+    if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0) {
+      dispatch({
+        type: "UP",
+      });
+    }
+  };
+  const handleDownOnClick = () => {
+    if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0) {
+      dispatch({
+        type: "DOWN",
+      });
+    }
   };
   return (
     <div className="console">
       <div className="up">
         <span
           className="console-item direction-button"
-          onClick={() => dispatch({
-            type: 'UP'
-          })}
+          onClick={handleUpOnClick}
         >
           ⬆︎
         </span>
@@ -37,9 +58,7 @@ function Console(props) {
       <div className="down">
         <span
           className="console-item direction-button"
-          onClick={() => dispatch({
-            type: 'DOWN'
-          })}
+          onClick={handleDownOnClick}
         >
           ⟱
         </span>
@@ -68,12 +87,7 @@ function Console(props) {
         <span className="console-item action-button">A</span>
       </div>
       <div className="B">
-        <span
-          className="console-item action-button"
-          onClick={() => dispatch({
-            type: "B"
-          })}
-        >
+        <span className="console-item action-button" onClick={handleBOnClick}>
           B
         </span>
       </div>
