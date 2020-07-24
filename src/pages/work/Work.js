@@ -16,11 +16,11 @@ function Work(props) {
 
     dispatch({
       type: "SET_ROUTES_OF_SELECTABLE_ITEMS",
-      routesOfSelectableItems: Object.keys(projects).map(
-        (key) => `${props.match.path}/${key}`
+      routesOfSelectableItems: Object.entries(projects).map(
+        ([key, value]) => `${props.match.path}/${value.id}`
       ),
     });
-    
+
     return () => {
       dispatch({
         type: "SET_NUM_OF_SELECTABLE_ITEMS",
@@ -49,6 +49,12 @@ function Work(props) {
         className={`${
           screenItems.indexOfSelectableItem === index ? SELECTED_ITEM : ""
         }`}
+        onMouseEnter={
+          () => dispatch({
+            type: 'MOUSE_SELECT_ITEM',
+            index
+          })
+        }
       >
         <Link to={`${path}/${value.id}`} className="selectable-item">
           • {value.name}

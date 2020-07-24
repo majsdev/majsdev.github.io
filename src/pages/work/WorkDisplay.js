@@ -33,8 +33,8 @@ function WorkDisplay({ work }) {
           />
         )}
 
-        <p class="desc" dangerouslySetInnerHTML={dangerousDesc}></p>
-        <div class="tech-stack">{techStackJSX}</div>
+        <p className="desc" dangerouslySetInnerHTML={dangerousDesc}></p>
+        <div className="tech-stack">{techStackJSX}</div>
       </div>
     </div>
   );

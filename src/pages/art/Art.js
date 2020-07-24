@@ -48,6 +48,12 @@ function Art(props) {
         className={`${
           screenItems.indexOfSelectableItem === index ? SELECTED_ITEM : ""
         }`}
+        onMouseEnter={
+          () => dispatch({
+            type: 'MOUSE_SELECT_ITEM',
+            index
+          })
+        }
       >
         <Link to={`${path}/${key}`}>• {key}</Link>
       </li>
