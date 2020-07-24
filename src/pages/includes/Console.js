@@ -16,13 +16,18 @@ function Console(props) {
         screenItems.routesOfSelectableItems[screenItems.indexOfSelectableItem]
       );
     }
-    // TODO: add rounte to stack for B to later navigate back
   };
   const handleBOnClick = () => {
+    const routeSplitted = props.history.location.pathname.split("/");
     if (screenItems.isMenuOpened) {
       dispatch({
         type: "CLOSE_MENU",
       });
+    } else if (routeSplitted.length > 1) {
+      const parentRoute = routeSplitted
+        .slice(0, routeSplitted.length - 1)
+        .join("/");
+      props.history.push(parentRoute);
     }
   };
   const handleUpOnClick = () => {
