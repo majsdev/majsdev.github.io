@@ -22,7 +22,7 @@ const reducer = (state, action) => {
           indexOfSelectedRoute: (indexOfSelectedRoute + 1) % NUMBER_OF_ROUTES,
         };
       }
-    case "MOUSE_SELECT":
+    case "MOUSE_SELECT_MENU":
       if (isMenuOpened) {
         return {
           ...state,

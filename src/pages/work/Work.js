@@ -20,6 +20,7 @@ function Work(props) {
         (key) => `${props.match.path}/${key}`
       ),
     });
+    
     return () => {
       dispatch({
         type: "SET_NUM_OF_SELECTABLE_ITEMS",

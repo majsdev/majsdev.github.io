@@ -33,7 +33,7 @@ function NavBar(props) {
         className={getNavItemSelectedClass(index)}
         onMouseEnter={
           () => dispatch({
-            type: 'MOUSE_SELECT',
+            type: 'MOUSE_SELECT_MENU',
             index
           })
         }
