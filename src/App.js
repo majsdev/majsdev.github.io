@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { About, Art, Home, Note, Work, NavBar, Console } from "./pages";
 import "./App.css";
 import { NUMBER_OF_ROUTES } from "./routes";
+import reducer from './reducer';
+
+export const ScreenContext = React.createContext();
 
 function App() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -45,66 +48,78 @@ function App() {
       );
   };
 
+  const screenItems = {
+    isMenuOpened: false,
+    indexOfSelectedRoute: 0,
+    numOfSelectableItems: 0,
+    routeOfSelectableItems: '#',
+    indexOfSelectableItem: 0
+  }
+
+  const [screenItemsState, dispatch] = React.useReducer(reducer, screenItems);
+
   return (
-    <div className="App">
-      <Router>
-        <div className="container">
-          <div className="content">
-            <Switch>
-              <Route exact path="/">
-                <Home setNumOfSelectableItems={setNumOfSelectableItems} />
-              </Route>
-              <Route path="/about">
-                <About setNumOfSelectableItems={setNumOfSelectableItems} />
-              </Route>
-              <Route path="/art">
-                <Art
-                  setNumOfSelectableItems={setNumOfSelectableItems}
-                  setIndexOfSelectableItem={setIndexOfSelectableItem}
-                  setRouteOfSelectableItems={setRouteOfSelectableItems}
-                  indexOfSelectableItem={indexOfSelectableItem}
-                />
-              </Route>
-              <Route path="/note">
-                <Note setNumOfSelectableItems={setNumOfSelectableItems} />
-              </Route>
-              <Route path="/work">
-                <Work
-                  setNumOfSelectableItems={setNumOfSelectableItems}
-                  setIndexOfSelectableItem={setIndexOfSelectableItem}
-                  setRouteOfSelectableItems={setRouteOfSelectableItems}
-                  indexOfSelectableItem={indexOfSelectableItem}
-                />
-              </Route>
-              <Route path="*"> 404 </Route>
-            </Switch>
+    <ScreenContext.Provider value={{ screenItems: screenItemsState, dispatch }}>
+      <div className="App">
+        <Router>
+          <div className="container">
+            <div className="content">
+              <Switch>
+                <Route exact path="/">
+                  <Home setNumOfSelectableItems={setNumOfSelectableItems} />
+                </Route>
+                <Route path="/about">
+                  <About setNumOfSelectableItems={setNumOfSelectableItems} />
+                </Route>
+                <Route path="/art">
+                  <Art
+                    setNumOfSelectableItems={setNumOfSelectableItems}
+                    setIndexOfSelectableItem={setIndexOfSelectableItem}
+                    setRouteOfSelectableItems={setRouteOfSelectableItems}
+                    indexOfSelectableItem={indexOfSelectableItem}
+                  />
+                </Route>
+                <Route path="/note">
+                  <Note setNumOfSelectableItems={setNumOfSelectableItems} />
+                </Route>
+                <Route path="/work">
+                  <Work
+                    setNumOfSelectableItems={setNumOfSelectableItems}
+                    setIndexOfSelectableItem={setIndexOfSelectableItem}
+                    setRouteOfSelectableItems={setRouteOfSelectableItems}
+                    indexOfSelectableItem={indexOfSelectableItem}
+                  />
+                </Route>
+                <Route path="*"> 404 </Route>
+              </Switch>
+            </div>
           </div>
-        </div>
 
-        {/* <div className="banner">
-          majiasheng
-        </div> */}
+          {/* <div className="banner">
+            majiasheng
+          </div> */}
 
-        <div className="console-wrapper">
-          <NavBar
-            isMenuOpened={isMenuOpened}
-            indexOfSelectedRoute={indexOfSelectedRoute}
-            handleMouseSelectNavItem={handleMouseSelectNavItem}
-          />
-          <Console
-            indexOfSelectedRoute={indexOfSelectedRoute}
-            handleSelectOnClick={handleSelectOnClick}
-            handleBOnClick={handleBOnClick}
-            isMenuOpened={isMenuOpened}
-            handleUpArrowOnClick={handleUpArrowOnClick}
-            handleDownArrowOnClick={handleDownArrowOnClick}
-            numOfSelectableItems={numOfSelectableItems}
-            routeOfSelectableItems={routeOfSelectableItems}
-            indexOfSelectableItem={indexOfSelectableItem}
-          />
-        </div>
-      </Router>
-    </div>
+          <div className="console-wrapper">
+            <NavBar
+              isMenuOpened={isMenuOpened}
+              indexOfSelectedRoute={indexOfSelectedRoute}
+              handleMouseSelectNavItem={handleMouseSelectNavItem}
+            />
+            <Console
+              indexOfSelectedRoute={indexOfSelectedRoute}
+              handleSelectOnClick={handleSelectOnClick}
+              handleBOnClick={handleBOnClick}
+              isMenuOpened={isMenuOpened}
+              handleUpArrowOnClick={handleUpArrowOnClick}
+              handleDownArrowOnClick={handleDownArrowOnClick}
+              numOfSelectableItems={numOfSelectableItems}
+              routeOfSelectableItems={routeOfSelectableItems}
+              indexOfSelectableItem={indexOfSelectableItem}
+            />
+          </div>
+        </Router>
+      </div>
+    </ScreenContext.Provider>
   );
 }
 
