@@ -31,8 +31,12 @@ function NavBar(props) {
       <li
         key={`${route.name}`}
         className={getNavItemSelectedClass(index)}
-        onMouseEnter={props.handleMouseSelectNavItem(index)}
-        // TODO: use dispatch
+        onMouseEnter={
+          () => dispatch({
+            type: 'MOUSE_SELECT',
+            index
+          })
+        }
       > 
         <Link to={route.path}>
           <span 
