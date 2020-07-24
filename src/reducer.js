@@ -1,9 +1,9 @@
 import { NUMBER_OF_ROUTES } from "./routes";
 
 const reducer = (state, action) => {
+  const { isMenuOpened, numOfSelectableItems, indexOfSelectedRoute, indexOfSelectableItem } = state;
   switch (action.type) {
     case "SELECT":
-      const { isMenuOpened, numOfSelectableItems, indexOfSelectedRoute, indexOfSelectableItem } = state;
       if (!isMenuOpened) {
         console.dir(state)
         return {
