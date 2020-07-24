@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { About, Art, Home, Note, Work, NavBar, Console } from "./pages";
 import "./App.css";
 import { NUMBER_OF_ROUTES } from "./routes";
-import reducer from './reducer';
+import reducer from "./reducer";
 
 export const ScreenContext = React.createContext();
 
@@ -12,7 +12,7 @@ function App() {
   const [indexOfSelectedRoute, setIndexOfSelectedRoute] = useState(0);
   /* doubles as indicator of arrow selectable items on the screen */
   const [numOfSelectableItems, setNumOfSelectableItems] = useState(0);
-  const [routeOfSelectableItems, setRouteOfSelectableItems] = useState('#');
+  const [routeOfSelectableItems, setRouteOfSelectableItems] = useState("#");
   const [indexOfSelectableItem, setIndexOfSelectableItem] = useState(0);
   const closeMenu = () => setIsMenuOpened(false);
   const openMenu = () => setIsMenuOpened(true);
@@ -52,9 +52,9 @@ function App() {
     isMenuOpened: false,
     indexOfSelectedRoute: 0,
     numOfSelectableItems: 0,
-    routeOfSelectableItems: '#',
-    indexOfSelectableItem: 0
-  }
+    routeOfSelectableItems: "#",
+    indexOfSelectableItem: 0,
+  };
 
   const [screenItemsState, dispatch] = React.useReducer(reducer, screenItems);
 
@@ -105,17 +105,7 @@ function App() {
               indexOfSelectedRoute={indexOfSelectedRoute}
               handleMouseSelectNavItem={handleMouseSelectNavItem}
             />
-            <Console
-              indexOfSelectedRoute={indexOfSelectedRoute}
-              handleSelectOnClick={handleSelectOnClick}
-              handleBOnClick={handleBOnClick}
-              isMenuOpened={isMenuOpened}
-              handleUpArrowOnClick={handleUpArrowOnClick}
-              handleDownArrowOnClick={handleDownArrowOnClick}
-              numOfSelectableItems={numOfSelectableItems}
-              routeOfSelectableItems={routeOfSelectableItems}
-              indexOfSelectableItem={indexOfSelectableItem}
-            />
+            <Console />
           </div>
         </Router>
       </div>

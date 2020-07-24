@@ -7,13 +7,13 @@ function Console(props) {
   const { screenItems, dispatch } = React.useContext(ScreenContext);
 
   const handleEnterOnClick = () => {
-    if (props.isMenuOpened)
-      props.history.push(routes[props.indexOfSelectedRoute].path);
+    if (screenItems.isMenuOpened)
+      props.history.push(routes[screenItems.indexOfSelectedRoute].path);
   };
   const handleAOnClick = () => {
-    if (!props.isMenuOpened && props.numOfSelectableItems > 0)
+    if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0)
       props.history.push(
-        props.routeOfSelectableItems[props.indexOfSelectableItem]
+        screenItems.routeOfSelectableItems[screenItems.indexOfSelectableItem]
       );
   };
   return (
@@ -21,7 +21,9 @@ function Console(props) {
       <div className="up">
         <span
           className="console-item direction-button"
-          onClick={props.handleUpArrowOnClick}
+          onClick={() => dispatch({
+            type: 'UP'
+          })}
         >
           ⬆︎
         </span>
@@ -35,7 +37,9 @@ function Console(props) {
       <div className="down">
         <span
           className="console-item direction-button"
-          onClick={props.handleDownArrowOnClick}
+          onClick={() => dispatch({
+            type: 'DOWN'
+          })}
         >
           ⟱
         </span>
@@ -48,7 +52,6 @@ function Console(props) {
               type: "SELECT",
             })
           }
-          // onClick={props.handleSelectOnClick}
         >
           SELECT
         </span>
@@ -67,7 +70,9 @@ function Console(props) {
       <div className="B">
         <span
           className="console-item action-button"
-          onClick={props.handleBOnClick}
+          onClick={() => dispatch({
+            type: "B"
+          })}
         >
           B
         </span>
