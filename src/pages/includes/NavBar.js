@@ -9,16 +9,19 @@ import {
   SELECTED_ITEM
 } from './cssClasses';
 import { routes } from '../../routes';
+import { ScreenContext } from "../../App";
+
 
 function NavBar(props) {
-  const getNavBarVisibilityClass = () => props.isMenuOpened ? VISIBLE : HIDDEN;
+  const { screenItems, dispatch } = React.useContext(ScreenContext);
+  const getNavBarVisibilityClass = () => screenItems.isMenuOpened ? VISIBLE : HIDDEN;
   const getNavItemVisibilityClass = (indexOfNavItem) => {
-    if (props.indexOfSelectedRoute === indexOfNavItem && props.isMenuOpened)
+    if (screenItems.indexOfSelectedRoute === indexOfNavItem && screenItems.isMenuOpened)
       return VISIBLE;
     return HIDDEN;
   }
   const getNavItemSelectedClass = (indexOfNavItem) => {
-    if (props.indexOfSelectedRoute === indexOfNavItem && props.isMenuOpened)
+    if (screenItems.indexOfSelectedRoute === indexOfNavItem && screenItems.isMenuOpened)
       return SELECTED_ITEM;
   }
   const routesJSX = [];
@@ -29,6 +32,7 @@ function NavBar(props) {
         key={`${route.name}`}
         className={getNavItemSelectedClass(index)}
         onMouseEnter={props.handleMouseSelectNavItem(index)}
+        // TODO: use dispatch
       > 
         <Link to={route.path}>
           <span 
