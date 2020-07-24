@@ -30,6 +30,14 @@ const reducer = (state, action) => {
         };
       }
       break;
+    case "MOUSE_SELECT_ITEM":
+      if (numOfSelectableItems > 0) {
+        return {
+          ...state,
+          indexOfSelectableItem: action.index,
+        };
+      }
+      break;
     case "ENTER":
       return state;
     case "CLOSE_MENU" /* B */:
