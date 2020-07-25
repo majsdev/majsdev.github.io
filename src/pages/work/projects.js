@@ -32,7 +32,7 @@ export default {
     techStack: ['Java', 'SpringMVC', 'MySQL', 'JPA'],
     dateOrStatus: '09/2017 -- 12/2017',
     thumbNail: 'rgm/1.png',
-    desc: 'Gerrymandering is the manipulation of district boundaries to provide political advantage to a party.<br>This tool uses demographic, geospatial and election data and employs various metrics to analyze whether a voting district has been gerrymandered.',
+    desc: 'Gerrymandering is the manipulation of district boundaries to provide political advantage to a party.<br>This tool uses demographic, geospatial, and election data to apply to various metrics to analyze whether a voting district has been gerrymandered.',
     images: [
       {
         relativePath: 'rgm/1.png',
@@ -58,7 +58,7 @@ export default {
     link: '',
     techStack: ['MIPS Assembly'],
     dateOrStatus: '11/2015',
-    desc: 'MS-DOS style game written in MISP assembly.',
+    desc: 'MS-DOS style 8-bit game.',
     thumbNail: 'lmw/1.gif',
     images: [
       {
