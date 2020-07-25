@@ -8,6 +8,14 @@ import { ScreenContext } from "../../App";
 function Work(props) {
   const { screenItems, dispatch } = React.useContext(ScreenContext);
 
+  /* reason for passing in index is to create closure */
+  const handleMouseSelectItem = (index) => {
+    return (() => dispatch({
+      type: 'MOUSE_SELECT_ITEM',
+      index
+    }));
+  };
+
   useEffect(() => {
     dispatch({
       type: "SET_NUM_OF_SELECTABLE_ITEMS",
@@ -49,12 +57,7 @@ function Work(props) {
         className={`${
           screenItems.indexOfSelectableItem === index ? SELECTED_ITEM : ""
         }`}
-        onMouseEnter={
-          () => dispatch({
-            type: 'MOUSE_SELECT_ITEM',
-            index
-          })
-        }
+        onMouseEnter={handleMouseSelectItem(index)}
       >
         <Link to={`${path}/${value.id}`} className="selectable-item">
           • {value.name}
