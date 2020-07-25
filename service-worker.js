@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/majiasheng-react/precache-manifest.120aa6acfea179b7a71c0eab8733371a.js"
+  "/majiasheng-react/precache-manifest.67aeac291db52f206bc9f98ef104ba00.js"
 );
 
 self.addEventListener('message', (event) => {
