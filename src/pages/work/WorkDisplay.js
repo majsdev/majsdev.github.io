@@ -1,5 +1,5 @@
 import React from "react";
-import './WorkDisplay.css';
+import "./WorkDisplay.css";
 
 /**
  * work: {
@@ -14,7 +14,7 @@ import './WorkDisplay.css';
 
 function WorkDisplay({ work }) {
   const { id, name, desc, techStack } = work;
-  const dangerousDesc = {__html: desc};
+  const dangerousDesc = { __html: desc };
   let techStackJSX = [];
   for (const [index, tech] of Object.entries(techStack)) {
     techStackJSX.push(<span key={`tech-stack-${id}-${index}`}>{tech}</span>);

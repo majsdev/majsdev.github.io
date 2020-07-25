@@ -1,9 +1,10 @@
 const pedestal = [
   {
-    imageLocation: '',
-    note: 'pedestal #1',
-    date: '2017-12-01'
-  }
+    imageFileName: "pedestal-no1.jpg",
+    imageName: "Cherry Wood columns",
+    note: "pedestal #1",
+    date: "2020-04-01",
+  },
 ];
 
 export default pedestal;

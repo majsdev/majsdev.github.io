@@ -3,12 +3,12 @@
 }
 
 .displayName {
-    position: sticky;
-    top: 1em;
-    left: 1em;
+  position: sticky;
+  top: 1em;
+  left: 1em;
 }
 
 .art-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
