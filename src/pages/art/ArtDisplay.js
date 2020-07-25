@@ -1,21 +1,40 @@
 import React from 'react';
+import './ArtDisplay.css';
 
 /**
- * artThemeValue = [
- *  {
- *      imageLocation: '',
- *      note: 'pedestal #1',
- *      date: '2017-12-01'
- *  }, ...
- * ]
+ * {
+ *    imageFileName: "heavily-minimal.jpeg",
+ *    imageName: "Heavily Minimal",
+ *    note: "minimal #1",
+ *    date: "2017-12-01",
+ *  },
  */
-function ArtDisplay({ artThemeName, artThemeValue }) {
+function ArtDisplay({ artThemeName, artThemeValues }) {
+
+    let imagesJSX = [];
+
+    for (const [index, artThemeValue] of Object.entries(artThemeValues)) {
+        imagesJSX.push(
+        <li
+          key={`${artThemeName}_${artThemeValue.imageName}_${index}`}
+        >
+            <img
+                className="art-image"
+                src={require(`../../images/arts/${artThemeName}/${artThemeValue.imageFileName}`)}
+                alt={artThemeValue.imageName}
+            />
+        </li>)
+    }
 
     return (
         <div className="ArtDisplay">
-            <h4>{artThemeName}</h4>
+            <h4 className="displayName">{artThemeName}</h4>
             <div className="art-display-body">
-                coming soon
+            {/* NOTE: path for image is not stored in a variable is because react doesn't resolve it */}
+                <ul>
+                    {imagesJSX}
+                </ul>
+        
             </div>
         </div>
     );

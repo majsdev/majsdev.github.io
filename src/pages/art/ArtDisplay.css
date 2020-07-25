@@ -1,0 +1,14 @@
+.ArtDisplay {
+  line-height: 1.6;
+}
+
+.displayName {
+    position: sticky;
+    top: 1em;
+    left: 1em;
+}
+
+.art-image {
+    width: 100%;
+    height: auto;
+}
