@@ -42,7 +42,20 @@ function Console(props) {
       dispatch({
         type: "DOWN",
       });
+    } else if (
+      !screenItems.isMenuOpened &&
+      screenItems.numOfSelectableItems < 1
+    ) {
+      /* FIXME: screenItems.numOfSelectableItems is still the number from 
+        parent if current route is `/art/*` or `/work/*` */
+      screenItems.contentRef.current.scrollTop -= 20;
     }
+  };
+  const handleLeftOnClick = () => {
+    screenItems.contentRef.current.scrollLeft += 20;
+  };
+  const handleRightOnClick = () => {
+    screenItems.contentRef.current.scrollLeft -= 20;
   };
   return (
     <div className="console">
@@ -54,10 +67,11 @@ function Console(props) {
           ⬆︎
         </span>
       </div>
-      <div className="right">
+      {/* TODO: select specific element for left/right scroll */}
+      <div className="right" onClick={handleRightOnClick}>
         <span className="console-item direction-button">➽</span>
       </div>
-      <div className="left">
+      <div className="left" onClick={handleLeftOnClick}>
         <span className="console-item direction-button">☚</span>
       </div>
       <div className="down">

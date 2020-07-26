@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { About, Art, Home, Note, Work, NavBar, Console } from "./pages";
 import "./App.css";
@@ -8,6 +8,7 @@ import reducer from "./reducer";
 export const ScreenContext = React.createContext();
 
 function App() {
+  const contentRef = useRef(null);
 
   const screenItems = {
     isMenuOpened: false,
@@ -15,6 +16,7 @@ function App() {
     numOfSelectableItems: 0,
     routesOfSelectableItems: [],
     indexOfSelectableItem: 0,
+    contentRef,
   };
 
   const [screenItemsState, dispatch] = React.useReducer(reducer, screenItems);
@@ -24,7 +26,7 @@ function App() {
       <div className="App">
         <Router>
           <div className="container">
-            <div className="content">
+            <div className="content" ref={contentRef}>
               <Switch>
                 <Route exact path="/">
                   <Home />
