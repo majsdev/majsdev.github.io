@@ -14,6 +14,15 @@ function About() {
       <p>
         I write code and solve problems.
       </p>
+      <hr />
+      <div className="philosophy">
+        My philosophy on art and design:
+        <ul className="philosophy">
+          <li>• Integrity</li>
+          <li>• Uniformity</li>
+          <li>• Focus</li>
+        </ul>
+      </div>
     </div>
   );
 }

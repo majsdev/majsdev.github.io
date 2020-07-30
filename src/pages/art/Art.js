@@ -79,6 +79,7 @@ function Art(props) {
   return (
     <div className="Art">
       <h3>Art - The Explicables and Inexplicables</h3>
+      <hr/>
       <Switch>
         <Route exact path={path}>
           <ul className="inline-block">{linksJSX}</ul>

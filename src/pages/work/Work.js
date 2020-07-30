@@ -80,6 +80,7 @@ function Work(props) {
   return (
     <div className="Work">
       <h3>Projects</h3>
+      <hr />
       <Switch>
         <Route exact path={path}>
           <ul className="inline-block">{links}</ul>
