@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b7549454e51d356acd09addea83b8f8",
+    "revision": "db660dd2495355c017a9af8792d98277",
     "url": "/index.html"
   },
   {
-    "revision": "de963bdc85635146599c",
-    "url": "/static/css/main.caa15047.chunk.css"
+    "revision": "49cd20ae90dea4342b9b",
+    "url": "/static/css/main.4002663a.chunk.css"
   },
   {
-    "revision": "11ffa3311a7dd9526ea5",
-    "url": "/static/js/2.d4cf6dba.chunk.js"
+    "revision": "c3df8b1bc19742677d29",
+    "url": "/static/js/2.9c7ee61d.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/static/js/2.d4cf6dba.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.9c7ee61d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de963bdc85635146599c",
-    "url": "/static/js/main.ae70ce0d.chunk.js"
+    "revision": "49cd20ae90dea4342b9b",
+    "url": "/static/js/main.f4646bb5.chunk.js"
   },
   {
     "revision": "0f354f8e95f9781add1a",
@@ -82,6 +82,46 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2c404fd06cd67770807d242b2d2e5a16",
     "url": "/static/media/PressStart2P-Regular.2c404fd0.ttf"
+  },
+  {
+    "revision": "38496fa6a2e7924104d2c5ad24290a6c",
+    "url": "/static/media/a0dbf220a032b6de6ab5102fb2051503.38496fa6.jpg"
+  },
+  {
+    "revision": "5078c2c3e2e7964d64cf1e4752cde290",
+    "url": "/static/media/dcc8b1b818b8cb5cb8b616b69d99dcd6.5078c2c3.jpg"
+  },
+  {
+    "revision": "5c4ec81593d1dde688e32a1ae1b64774",
+    "url": "/static/media/geometric1.5c4ec815.jpg"
+  },
+  {
+    "revision": "bd42af047482ce2cc2312a8eda22b6f7",
+    "url": "/static/media/geometric2.bd42af04.jpg"
+  },
+  {
+    "revision": "0e37efa365eb834cec12d785264b6abb",
+    "url": "/static/media/geometric3.0e37efa3.jpg"
+  },
+  {
+    "revision": "d3f07c2838c02c5c72a359ed83c7bdc6",
+    "url": "/static/media/geometric4.d3f07c28.jpg"
+  },
+  {
+    "revision": "c8fa7fe03fe064b583ebda2ed6f0cee4",
+    "url": "/static/media/heavily-minimal.c8fa7fe0.jpeg"
+  },
+  {
+    "revision": "89d2df910dbb8370877213fb9050160b",
+    "url": "/static/media/lisa.89d2df91.jpg"
+  },
+  {
+    "revision": "a6f9ac7bcde76b4bbb6f34111e032e3f",
+    "url": "/static/media/pedestal-no1.a6f9ac7b.jpg"
+  },
+  {
+    "revision": "844f7ca3e494e6b957fcd2eae32f66d6",
+    "url": "/static/media/precarious1.844f7ca3.jpg"
   },
   {
     "revision": "e6290dcbde317f78ca98eb2c39ad01fb",
