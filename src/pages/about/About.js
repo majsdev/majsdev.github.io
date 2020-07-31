@@ -12,7 +12,7 @@ function About() {
         {/* <span role="img" aria-label="name-info">ℹ️</span> */}
       </p>
       <p>
-        I write code and solve problems.
+        I solve problems.
       </p>
       <hr />
       <div className="philosophy">

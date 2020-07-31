@@ -33,7 +33,7 @@ function ArtDisplay({ artThemeName, artThemeValues }) {
       <h4 className="displayName">{artThemeName}</h4>
       <div className="art-display-body">
         {/* NOTE: path for image is not stored in a variable is because react doesn't resolve it */}
-        <ul>{imagesJSX}</ul>
+        <ul className='art-image-list'>{imagesJSX}</ul>
       </div>
     </div>
   );
