@@ -174,3 +174,20 @@ body {
 .block {
   display: block;
 }
+
+/* icon */
+.icon-height-16px {
+  height: 16px;
+  width: auto;
+}
+
+/* anchor */
+a.anchorHoverNoEffect:hover {
+  text-decoration: none;
+  background-color: unset;
+}
+
+/* list */
+.inline-list li {
+  display: inline;
+}
