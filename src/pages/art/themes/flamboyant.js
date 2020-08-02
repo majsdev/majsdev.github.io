@@ -1,10 +1,10 @@
-const glamorous = [
+const flamboyant = [
   {
     imageFileName: "lisa.jpg",
     imageName: "lisa",
-    note: "glamorous #1",
+    note: "flamboyant #1",
     date: "2017-12-01",
   },
 ];
 
-export default glamorous;
+export default flamboyant;

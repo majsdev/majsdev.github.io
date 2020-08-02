@@ -1,71 +1,101 @@
-import React from "react";
 import "./About.css";
-import githubIcon from "../../images/icons/GitHub-Mark-32px.png";
-import linkedinIcon from "../../images/icons/LI-In-Bug.png";
-function About() {
+import React, { useEffect } from "react";
+import { Switch, Route, Link, withRouter } from "react-router-dom";
+import sections from './sections';
+import { SELECTED_ITEM } from "../includes/cssClasses";
+import { ScreenContext } from "../../App";
+
+function About(props) {
+  const { screenItems, dispatch } = React.useContext(ScreenContext);
+
+  /* reason for passing in index is to create closure */
+  const handleMouseSelectItem = (index) => {
+    return (() => dispatch({
+      type: 'MOUSE_SELECT_ITEM',
+      index
+    }));
+  };
+
+  useEffect(() => {
+    dispatch({
+      type: "SET_NUM_OF_SELECTABLE_ITEMS",
+      numOfSelectableItems: Object.entries(sections).length,
+    });
+
+    dispatch({
+      type: "SET_ROUTES_OF_SELECTABLE_ITEMS",
+      routesOfSelectableItems: Object.entries(sections).map(
+        ([key, value]) => `${props.match.path}/${value.id}`
+      ),
+    });
+
+    return () => {
+      dispatch({
+        type: "SET_NUM_OF_SELECTABLE_ITEMS",
+        numOfSelectableItems: 0,
+      });
+      dispatch({
+        type: "SET_ROUTES_OF_SELECTABLE_ITEMS",
+        routesOfSelectableItems: [],
+      });
+      dispatch({
+        type: "SET_INDEX_OF_SELECTABLE_ITEM",
+        indexOfSelectableItem: 0,
+      });
+    };
+  }, []);
+
+  let { path } = props.match; /* `match` is from `withRouter` */
+  let linksJSX = [];
+  let routesJSX = [];
+
+  let index = 0;
+  Object.entries(sections).map(([key, value]) => {
+    linksJSX.push(
+      <li
+        key={`link_${key}`}
+        className={`${
+          screenItems.indexOfSelectableItem === index ? SELECTED_ITEM : ""
+        }`}
+        onMouseEnter={handleMouseSelectItem(index)}
+      >
+        <Link to={`${path}/${key}`}>• {value.displayName}</Link>
+      </li>
+    );
+    routesJSX.push(
+      <Route path={`${path}/${key}`} key={`route_${key}`}>
+        {value.component}
+      </Route>
+    );
+    index++;
+  })
+
+
+
   return (
     <div className="About">
-      <div className="intro">
-        <h3>Hello world</h3>
-        <hr />
-        <p>
-          My name is Jia Sheng Ma.
-          {/* <span role="img" aria-label="name-info">ℹ️</span> */}
-        </p>
-        <p>I am a software engineer,</p>
-        <p>and I solve problems.</p>
-      </div>
-      <br />
-      <div className="philosophy">
-        <h4>Art/Design Philosophy</h4>
-        <ul className="philosophy">
-          <li>
-            <p>• Integrity</p>
-          </li>
-          <li>
-            <p>• Uniformity</p>
-          </li>
-          <li>
-            <p>• Focus</p>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <div className="contact">
-        <h4>Links</h4>
-        <ul className="inline-list">
-          <li>
-            <a
-              href="https://github.com/majiasheng/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="anchorHoverNoEffect"
-            >
-              <img
-                alt="github"
-                src={githubIcon}
-                className="icon-height-16px"
-              ></img>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/majiasheng/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="anchorHoverNoEffect"
-            >
-              <img
-                alt="linkedin"
-                src={linkedinIcon}
-                className="icon-height-16px"
-              ></img>
-            </a>
-          </li>
-        </ul>
-      </div>
+
+      <Switch>
+        <Route exact path={path}>
+        <div className="intro">
+          <h3>Hello world</h3>
+          <hr />
+          <p>
+            My name is Jia Sheng Ma.
+            {/* <span role="img" aria-label="name-info">ℹ️</span> */}
+          </p>
+          <p>I am a software engineer,</p>
+          <p>and I solve problems.</p>
+          <hr />
+          <br />
+        </div>
+          <ul className="inline-block">{linksJSX}</ul>
+        </Route>
+
+        {routesJSX}
+      </Switch>
     </div>
   );
 }
 
-export default About;
+export default withRouter(About);
