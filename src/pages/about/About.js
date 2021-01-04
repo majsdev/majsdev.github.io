@@ -25,7 +25,7 @@ function About(props) {
     dispatch({
       type: "SET_ROUTES_OF_SELECTABLE_ITEMS",
       routesOfSelectableItems: Object.entries(sections).map(
-        ([key, value]) => `${props.match.path}/${value.id}`
+        ([key, value]) => `${props.match.path}/${key}`
       ),
     });
 

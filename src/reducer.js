@@ -10,7 +10,6 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "SELECT":
       if (!isMenuOpened) {
-        console.dir(state);
         return {
           ...state,
           isMenuOpened: true,
