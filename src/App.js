@@ -40,9 +40,9 @@ function App() {
                 <Route path="/note">
                   <Note />
                 </Route>
-                <Route path="/work">
+                {/* <Route path="/work">
                   <Work />
-                </Route>
+                </Route> */}
                 <Route path="*"> 404 </Route>
               </Switch>
             </div>

@@ -78,7 +78,8 @@ function Art(props) {
 
   return (
     <div className="Art">
-      <h3>Art - The Explicables and Inexplicables</h3>
+      <h3>Art</h3>
+      The Explicables and Inexplicables
       <hr/>
       <Switch>
         <Route exact path={path}>

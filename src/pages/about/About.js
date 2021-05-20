@@ -81,11 +81,10 @@ function About(props) {
           <h3>Hello world</h3>
           <hr />
           <p>
-            My name is Jia Sheng Ma.
+            My name is Jia Sheng Ma /jah shane ma/. I go by Jia Sheng or Sheng.
             {/* <span role="img" aria-label="name-info">ℹ️</span> */}
           </p>
-          <p>I am a software engineer,</p>
-          <p>and I solve problems.</p>
+          <p>I am a software engineer, and I solve problems.</p>
           <hr />
           <br />
         </div>

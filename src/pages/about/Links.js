@@ -35,7 +35,7 @@ function Links() {
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/in/majiasheng/"
+            href="https://www.linkedin.com/in/js-ma/"
             target="_blank"
             rel="noopener noreferrer"
             className="anchorHoverNoEffect"
