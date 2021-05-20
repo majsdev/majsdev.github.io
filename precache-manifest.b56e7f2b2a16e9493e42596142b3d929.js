@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9373446808cbc148693a20fa21b2ccb4",
+    "revision": "d02ee8a7c56dccd781de0b954b0ce169",
     "url": "/index.html"
   },
   {
-    "revision": "4f9420e705f0dc738ce0",
+    "revision": "235162f654705fd34e2d",
     "url": "/static/css/main.d58516eb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.f8c8eb4b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f9420e705f0dc738ce0",
-    "url": "/static/js/main.4945cab2.chunk.js"
+    "revision": "235162f654705fd34e2d",
+    "url": "/static/js/main.d577533d.chunk.js"
   },
   {
     "revision": "0f354f8e95f9781add1a",
@@ -84,14 +84,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/PressStart2P-Regular.2c404fd0.ttf"
   },
   {
-    "revision": "38496fa6a2e7924104d2c5ad24290a6c",
-    "url": "/static/media/a0dbf220a032b6de6ab5102fb2051503.38496fa6.jpg"
-  },
-  {
-    "revision": "5078c2c3e2e7964d64cf1e4752cde290",
-    "url": "/static/media/dcc8b1b818b8cb5cb8b616b69d99dcd6.5078c2c3.jpg"
-  },
-  {
     "revision": "5c4ec81593d1dde688e32a1ae1b64774",
     "url": "/static/media/geometric1.5c4ec815.jpg"
   },
@@ -108,6 +100,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/geometric4.d3f07c28.jpg"
   },
   {
+    "revision": "21c78631b1336590d6839233df50b7a6",
+    "url": "/static/media/geometric5.21c78631.jpg"
+  },
+  {
+    "revision": "a61d202ec9ab4bda6ae607365d4563cd",
+    "url": "/static/media/geometric6.a61d202e.jpg"
+  },
+  {
     "revision": "c8fa7fe03fe064b583ebda2ed6f0cee4",
     "url": "/static/media/heavily-minimal.c8fa7fe0.jpeg"
   },
@@ -117,11 +117,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "a6f9ac7bcde76b4bbb6f34111e032e3f",
-    "url": "/static/media/pedestal-no1.a6f9ac7b.jpg"
+    "url": "/static/media/pedestal1.a6f9ac7b.jpg"
+  },
+  {
+    "revision": "255505de2157ab7d23541abb5f2ab592",
+    "url": "/static/media/pedestal2.255505de.jpg"
   },
   {
     "revision": "844f7ca3e494e6b957fcd2eae32f66d6",
     "url": "/static/media/precarious1.844f7ca3.jpg"
+  },
+  {
+    "revision": "18208e299a8299a359a35284e65e2166",
+    "url": "/static/media/precarious2.18208e29.jpg"
   },
   {
     "revision": "e6290dcbde317f78ca98eb2c39ad01fb",

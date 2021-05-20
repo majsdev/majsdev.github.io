@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.d58516eb.chunk.css",
-    "main.js": "/static/js/main.4945cab2.chunk.js",
-    "main.js.map": "/static/js/main.4945cab2.chunk.js.map",
+    "main.js": "/static/js/main.d577533d.chunk.js",
+    "main.js.map": "/static/js/main.d577533d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.81dbaedd.js",
     "runtime-main.js.map": "/static/js/runtime-main.81dbaedd.js.map",
     "static/js/2.f8c8eb4b.chunk.js": "/static/js/2.f8c8eb4b.chunk.js",
     "static/js/2.f8c8eb4b.chunk.js.map": "/static/js/2.f8c8eb4b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.bbd27412c1e262e7cbb09dc3f2a167af.js": "/precache-manifest.bbd27412c1e262e7cbb09dc3f2a167af.js",
+    "precache-manifest.b56e7f2b2a16e9493e42596142b3d929.js": "/precache-manifest.b56e7f2b2a16e9493e42596142b3d929.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.d58516eb.chunk.css.map": "/static/css/main.d58516eb.chunk.css.map",
     "static/js/2.f8c8eb4b.chunk.js.LICENSE.txt": "/static/js/2.f8c8eb4b.chunk.js.LICENSE.txt",
@@ -18,16 +18,18 @@
     "static/media/3.png": "/static/media/3.ceebee15.png",
     "static/media/4.png": "/static/media/4.deb28d58.png",
     "static/media/index.css": "/static/media/PressStart2P-Regular.2c404fd0.ttf",
-    "static/media/a0dbf220a032b6de6ab5102fb2051503.jpg": "/static/media/a0dbf220a032b6de6ab5102fb2051503.38496fa6.jpg",
-    "static/media/dcc8b1b818b8cb5cb8b616b69d99dcd6.jpg": "/static/media/dcc8b1b818b8cb5cb8b616b69d99dcd6.5078c2c3.jpg",
     "static/media/geometric1.jpg": "/static/media/geometric1.5c4ec815.jpg",
     "static/media/geometric2.jpg": "/static/media/geometric2.bd42af04.jpg",
     "static/media/geometric3.jpg": "/static/media/geometric3.0e37efa3.jpg",
     "static/media/geometric4.jpg": "/static/media/geometric4.d3f07c28.jpg",
+    "static/media/geometric5.jpg": "/static/media/geometric5.21c78631.jpg",
+    "static/media/geometric6.jpg": "/static/media/geometric6.a61d202e.jpg",
     "static/media/heavily-minimal.jpeg": "/static/media/heavily-minimal.c8fa7fe0.jpeg",
     "static/media/lisa.jpg": "/static/media/lisa.89d2df91.jpg",
-    "static/media/pedestal-no1.jpg": "/static/media/pedestal-no1.a6f9ac7b.jpg",
+    "static/media/pedestal1.jpg": "/static/media/pedestal1.a6f9ac7b.jpg",
+    "static/media/pedestal2.jpg": "/static/media/pedestal2.255505de.jpg",
     "static/media/precarious1.jpg": "/static/media/precarious1.844f7ca3.jpg",
+    "static/media/precarious2.jpg": "/static/media/precarious2.18208e29.jpg",
     "static/media/prediction.png": "/static/media/prediction.e6290dcb.png",
     "static/media/route-traveled.png": "/static/media/route-traveled.6eca30d1.png"
   },
@@ -35,6 +37,6 @@
     "static/js/runtime-main.81dbaedd.js",
     "static/js/2.f8c8eb4b.chunk.js",
     "static/css/main.d58516eb.chunk.css",
-    "static/js/main.4945cab2.chunk.js"
+    "static/js/main.d577533d.chunk.js"
   ]
 }
