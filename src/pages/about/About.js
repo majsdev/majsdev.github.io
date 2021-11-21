@@ -70,8 +70,6 @@ function About(props) {
     index++;
   })
 
-
-
   return (
     <div className="About">
 

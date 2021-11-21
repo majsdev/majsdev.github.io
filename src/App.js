@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { About, Art, Home, Note, Work, NavBar, Console } from "./pages";
+import { About, Art, Home, Posts, Work, NavBar, Console } from "./pages";
 import "./App.css";
 // import { NUMBER_OF_ROUTES } from "./routes";
 import reducer from "./reducer";
@@ -37,8 +37,8 @@ function App() {
                 <Route path="/art">
                   <Art />
                 </Route>
-                <Route path="/note">
-                  <Note />
+                <Route path="/posts">
+                  <Posts />
                 </Route>
                 {/* <Route path="/work">
                   <Work />
