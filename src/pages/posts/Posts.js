@@ -5,7 +5,8 @@ import { SELECTED_ITEM } from "../includes/cssClasses";
 import Post from "./Post";
 import { ScreenContext } from "../../App";
 
-
+// TODO: add keyword prop
+// TODO: add search
 function Posts(props) {
   const { screenItems, dispatch } = React.useContext(ScreenContext);
 
