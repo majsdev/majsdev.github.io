@@ -3,7 +3,7 @@ export const routes = [
     {path: '/about', name: 'About'},
     {path: '/art', name: 'Art'},
     // {path: '/work', name: 'Work'},
-    // {path: '/note', name: 'Note'},
+    {path: '/posts', name: 'Posts'},
 ];
 
 export const NUMBER_OF_ROUTES = routes.length;

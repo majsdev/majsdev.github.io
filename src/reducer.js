@@ -3,6 +3,7 @@ import { NUMBER_OF_ROUTES } from "./routes";
 const reducer = (state, action) => {
   const {
     isMenuOpened,
+    isContentScrollable,
     numOfSelectableItems,
     indexOfSelectedRoute,
     indexOfSelectableItem,
@@ -88,6 +89,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         indexOfSelectableItem: action.indexOfSelectableItem,
+      };
+    case "SET_CONTENT_SCROLLABLE":
+      return {
+        ...state,
+        isContentScrollable: action.isContentScrollable,
       };
     default:
       return state;

@@ -31,24 +31,21 @@ function Console(props) {
     }
   };
   const handleUpOnClick = () => {
-    if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0) {
+    if (screenItems.isContentScrollable) {
+      screenItems.contentRef.current.scrollTop -= 20;
+    } else if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0) {
       dispatch({
         type: "UP",
       });
     }
   };
   const handleDownOnClick = () => {
-    if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0) {
+    if (screenItems.isContentScrollable) {
+      screenItems.contentRef.current.scrollTop += 20;
+    } else if (!screenItems.isMenuOpened && screenItems.numOfSelectableItems > 0) {
       dispatch({
         type: "DOWN",
       });
-    } else if (
-      !screenItems.isMenuOpened &&
-      screenItems.numOfSelectableItems < 1
-    ) {
-      /* FIXME: screenItems.numOfSelectableItems is still the number from 
-        parent if current route is `/art/*` or `/work/*` */
-      screenItems.contentRef.current.scrollTop -= 20;
     }
   };
   const handleLeftOnClick = () => {
