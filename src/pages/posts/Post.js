@@ -34,7 +34,7 @@ function Post({ title, date, content }) {
       <h4 className="post-title">{title.toUpperCase()}</h4>
       <h4 className="post-date">{date}</h4>
       <div className="post-content">
-        {content}
+        <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </div>
   );
