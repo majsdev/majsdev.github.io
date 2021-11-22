@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import { ScreenContext } from "../../App";
 import "./ArtDisplay.css";
 
 /**
@@ -10,6 +11,25 @@ import "./ArtDisplay.css";
  *  },
  */
 function ArtDisplay({ artThemeName, artThemeValues }) {
+
+  const { screenItems, dispatch } = React.useContext(ScreenContext);
+
+  useEffect(() => {
+    // enable scroll
+    dispatch({
+      type: "SET_CONTENT_SCROLLABLE",
+      isContentScrollable: true,
+    });
+
+    return () => {
+      // disable scroll
+      dispatch({
+        type: "SET_CONTENT_SCROLLABLE",
+        isContentScrollable: false,
+      });
+    }
+  }, []);
+
   let imagesJSX = [];
 
   for (const [index, artThemeValue] of Object.entries(artThemeValues)) {

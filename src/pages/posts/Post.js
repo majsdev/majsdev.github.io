@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import { ScreenContext } from "../../App";
 import "./Post.css";
 
 /**
@@ -9,6 +10,24 @@ import "./Post.css";
  *  },
  */
 function Post({ title, date, content }) {
+
+  const { screenItems, dispatch } = React.useContext(ScreenContext);
+
+  useEffect(() => {
+    // enable scroll
+    dispatch({
+      type: "SET_CONTENT_SCROLLABLE",
+      isContentScrollable: true,
+    });
+
+    return () => {
+      // disable scroll
+      dispatch({
+        type: "SET_CONTENT_SCROLLABLE",
+        isContentScrollable: false,
+      });
+    }
+  }, []);
 
   return (
     <div className="Post">

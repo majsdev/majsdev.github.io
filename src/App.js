@@ -10,8 +10,10 @@ export const ScreenContext = React.createContext();
 function App() {
   const contentRef = useRef(null);
 
+  // TODO: share this initial state with reducer
   const screenItems = {
     isMenuOpened: false,
+    isContentScrollable: false,
     indexOfSelectedRoute: 0,
     numOfSelectableItems: 0,
     routesOfSelectableItems: [],
