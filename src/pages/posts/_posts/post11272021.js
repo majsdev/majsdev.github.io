@@ -42,12 +42,23 @@ const post = {
     Sometimes, you may need to go back to the design phase and revise the plan.
 
     Adding to the code writing portion of this section, *version control* is something that you will be working with inseparably. 
-    What this is 
+    What this is is that your code changes are versioned. When you make changes and commit them, they are versioned.
+    Git is a version control tool.
     </div>
 
     <div>
     <h2>3. Deploy</h2>
-    When your application matures to the point where it is ready to go live for users to use, you are going to deploy it.
+    When your application matures to the point where it is ready to go live for users to use, you are going to deploy it (to production usually).
+    This could mean that you are hosting your application on a server in your basement (your data center).
+    Or you have cloud providers that you ship your code to.
+    Whichever method you choose, you will need to set up some additional code/script to accomplish that.
+
+    You will come across the term CI/CD (continuous integration/continous deployment) quite often.
+    This is basically saying you are pushing your code to a shared upstream often.
+    It involves building and testing the code you pushed, to ensure that the application is at a working state.
+    If not, you will know that it fails to work with the other pieces of the application, and you will get to fix the issue before you deploy your feature.
+    And CD is describing the ability to ship your working code in an uninterrupted fashion.
+    This relies on the fact that the code is in a working state, hence CI, then CD.
     </div>
     `
 
