@@ -7,6 +7,7 @@ body {
   display: grid;
   align-content: center; /* vertical */
   justify-content: center; /* horizontal */
+  line-height: 10pt;
 }
 
 .App {

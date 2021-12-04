@@ -80,7 +80,7 @@ function Art(props) {
     <div className="Art">
       <h3>Art</h3>
       The Explicables and Inexplicables
-      <hr/>
+      <hr />
       <Switch>
         <Route exact path={path}>
           <ul className="inline-block">{linksJSX}</ul>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 import * as posts from "./_posts";
 import { SELECTED_ITEM } from "../includes/cssClasses";
@@ -70,7 +70,7 @@ function Posts(props) {
       </Route>
     );
     index++;
-  })
+  });
 
   routesJSX.push(
     <Route path={`${path}/*`} key={`route_404`}>
@@ -80,8 +80,8 @@ function Posts(props) {
 
   return (
     <div className="Posts">
-        <h3>Posts</h3>
-        <hr/>
+      <h3>Posts</h3>
+      <hr />
       <Switch>
         <Route exact path={path}>
           <ul className="inline-block">{linksJSX}</ul>
