@@ -35,6 +35,10 @@ function Post({ title, date, content }) {
       <h4 className="post-date">{date}</h4>
       <div className="post-content">
         <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div>
+          <br/>
+          - majiasheng
+        </div>
       </div>
     </div>
   );
