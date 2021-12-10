@@ -91,6 +91,13 @@ body {
   position: relative;
 }
 
+.direction-button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .up {
   grid-column: 2;
   grid-row: 1;
