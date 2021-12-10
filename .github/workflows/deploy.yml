@@ -19,5 +19,5 @@ jobs:
 
       - name: Install dependency and deploy
         run: |
-          CI=false npm ci
-          npm run-script deploy
+          npm ci
+          CI=false npm run-script deploy
