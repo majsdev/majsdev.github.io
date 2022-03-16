@@ -79,7 +79,7 @@ function Art(props) {
   return (
     <div className="Art">
       <h3>Art</h3>
-      The Explicables and Inexplicables
+      is whatever you make of it
       <hr />
       <Switch>
         <Route exact path={path}>

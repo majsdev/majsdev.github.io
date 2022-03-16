@@ -79,12 +79,12 @@ function Posts(props) {
   );
 
   return (
-    <div className="Posts">
+    <div className="posts">
       <h3>Posts</h3>
       <hr />
       <Switch>
         <Route exact path={path}>
-          <ul className="inline-block">{linksJSX}</ul>
+          <ul className="inline-block posts-list">{linksJSX}</ul>
         </Route>
 
         {routesJSX}

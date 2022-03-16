@@ -3,3 +3,7 @@ ul.inline-list li {
     justify-content: space-evenly; */
   padding: 0.5em;
 }
+
+.about {
+  line-height: 12pt;
+}
