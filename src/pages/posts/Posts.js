@@ -80,7 +80,7 @@ function Posts(props) {
 
   return (
     <div className="posts">
-      <h3>Posts</h3>
+      <h3>Posts <a href="./plain.html" title="Plain View">📄</a></h3>
       <hr />
       <Switch>
         <Route exact path={path}>
