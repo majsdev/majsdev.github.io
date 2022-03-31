@@ -4,6 +4,7 @@ import * as themes from "./themes";
 import { SELECTED_ITEM } from "../includes/cssClasses";
 import ArtDisplay from "./ArtDisplay";
 import { ScreenContext } from "../../App";
+import twbm from "./assets/twbm-vol1-ed1.pdf";
 
 function Art(props) {
   const { screenItems, dispatch } = React.useContext(ScreenContext);
@@ -81,13 +82,17 @@ function Art(props) {
       <h3>Art</h3>
       is whatever you make of it
       <hr />
+      <h4>Collections</h4>
       <Switch>
         <Route exact path={path}>
-          <ul className="inline-block">{linksJSX}</ul>
+          <ul className="inline-block art-collections">{linksJSX}</ul>
         </Route>
 
         {routesJSX}
       </Switch>
+      <hr/>
+      <h4>Volumes</h4>
+      <a href={twbm} target="_blank">• TWBM Vol.1</a>
     </div>
   );
 }
