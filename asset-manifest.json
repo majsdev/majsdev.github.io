@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.bc389096.chunk.css",
-    "main.js": "/static/js/main.09dce602.chunk.js",
-    "main.js.map": "/static/js/main.09dce602.chunk.js.map",
+    "main.js": "/static/js/main.eaa999bb.chunk.js",
+    "main.js.map": "/static/js/main.eaa999bb.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.81dbaedd.js",
     "runtime-main.js.map": "/static/js/runtime-main.81dbaedd.js.map",
     "static/js/2.85677683.chunk.js": "/static/js/2.85677683.chunk.js",
     "static/js/2.85677683.chunk.js.map": "/static/js/2.85677683.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.157d4cb970e8f82d19165e2e44dc595a.js": "/precache-manifest.157d4cb970e8f82d19165e2e44dc595a.js",
+    "precache-manifest.afac642e15cb46dee42f5dc3c7beb6a6.js": "/precache-manifest.afac642e15cb46dee42f5dc3c7beb6a6.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.bc389096.chunk.css.map": "/static/css/main.bc389096.chunk.css.map",
     "static/js/2.85677683.chunk.js.LICENSE.txt": "/static/js/2.85677683.chunk.js.LICENSE.txt",
@@ -32,12 +32,12 @@
     "static/media/precarious2.jpg": "/static/media/precarious2.18208e29.jpg",
     "static/media/prediction.png": "/static/media/prediction.e6290dcb.png",
     "static/media/route-traveled.png": "/static/media/route-traveled.6eca30d1.png",
-    "static/media/twbm-vol1-ed1.pdf": "/static/media/twbm-vol1-ed1.6c4dcbe9.pdf"
+    "static/media/twbm-vol1-ed1.pdf": "/static/media/twbm-vol1-ed1.8c705995.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.81dbaedd.js",
     "static/js/2.85677683.chunk.js",
     "static/css/main.bc389096.chunk.css",
-    "static/js/main.09dce602.chunk.js"
+    "static/js/main.eaa999bb.chunk.js"
   ]
 }
