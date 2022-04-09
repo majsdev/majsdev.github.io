@@ -1,6 +1,6 @@
 const post = {
-  title: "What is API?",
-  date: "03/30/2022",
+  title: 'What is API?',
+  date: '03/30/2022',
   content: `
     <div>
         <p>
