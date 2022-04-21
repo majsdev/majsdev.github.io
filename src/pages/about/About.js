@@ -87,6 +87,9 @@ function About(props) {
           <br/>
           and utilitarian artist
           </p>
+          <p>
+          This site is the initial version of <a href="majiasheng.github.io">majiasheng.github.io</a> (07/2020 -- 04/2022)
+          </p>
           <hr />
           <br />
         </div>
