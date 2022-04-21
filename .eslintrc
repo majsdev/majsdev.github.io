@@ -1,6 +1,7 @@
 {
   "extends": ["airbnb", "airbnb/hooks"],
   "rules": {
-    "no-trailing-spaces": "warn"
+    "no-trailing-spaces": "warn",
+    "react/jsx-filename-extension": "off"
   }
 }

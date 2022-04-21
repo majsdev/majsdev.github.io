@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { About, Art, Home, Posts, Work, NavBar, Console } from "./pages";
-import "./App.css";
-// import { NUMBER_OF_ROUTES } from "./routes";
-import reducer from "./reducer";
+import React, { useRef } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { NavBar, Console } from './pages';
+import './App.css';
+import { routes } from './routes';
+import reducer from './reducer';
 
 export const ScreenContext = React.createContext();
 
@@ -26,38 +26,33 @@ function App() {
   return (
     <ScreenContext.Provider value={{ screenItems: screenItemsState, dispatch }}>
       <div className="App">
+
         <Router>
-          <div className="container">
-            <div className="content" ref={contentRef}>
-              <Switch>
-                <Route exact path="/">
-                  <Home />
-                </Route>
-                <Route path="/about">
-                  <About />
-                </Route>
-                <Route path="/art">
-                  <Art />
-                </Route>
-                <Route path="/posts">
-                  <Posts />
-                </Route>
-                {/* <Route path="/work">
-                  <Work />
-                </Route> */}
-                <Route path="*"> 404 </Route>
-              </Switch>
-            </div>
-          </div>
 
-          {/* <div className="banner">
-            majiasheng
-          </div> */}
+          <Switch>
+            <Route exact path="/">
+              new home
+            </Route>
 
-          <div className="console-wrapper">
-            <NavBar />
-            <Console />
-          </div>
+            <Route path="/gb">
+              <div className="container">
+                <div className="content" ref={contentRef}>
+                  <Switch>
+                    {routes.map((r) => (
+                      <Route exact path={r.path} component={r.component} key={r.name} />
+                    ))}
+                    <Route path="*"> 404 </Route>
+                  </Switch>
+                </div>
+              </div>
+
+              <div className="console-wrapper">
+                <NavBar />
+                <Console />
+              </div>
+            </Route>
+
+          </Switch>
         </Router>
       </div>
     </ScreenContext.Provider>
