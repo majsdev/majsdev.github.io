@@ -77,18 +77,8 @@ function About(props) {
         <Route exact path={path}>
         <div className="intro">
           <h3>Hello World</h3>
-          <hr />
           <p>
-          I am Jia Sheng
-          </p>
-          <p>
-          Software engineer
-          <br/>
-          <br/>
-          and utilitarian artist
-          </p>
-          <p>
-          This site is the initial version of <a href="majiasheng.github.io">majiasheng.github.io</a> (07/2020 -- 04/2022)
+          This site is the initial version of <a href="https://majiasheng.github.io">majiasheng.github.io</a> (07/2020 -- 04/2022)
           </p>
           <hr />
           <br />
