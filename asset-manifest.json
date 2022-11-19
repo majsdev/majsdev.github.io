@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.bc389096.chunk.css",
-    "main.js": "/static/js/main.816da68e.chunk.js",
-    "main.js.map": "/static/js/main.816da68e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.81dbaedd.js",
-    "runtime-main.js.map": "/static/js/runtime-main.81dbaedd.js.map",
-    "static/js/2.d4c2ef2d.chunk.js": "/static/js/2.d4c2ef2d.chunk.js",
-    "static/js/2.d4c2ef2d.chunk.js.map": "/static/js/2.d4c2ef2d.chunk.js.map",
+    "main.css": "/static/css/main.7bd277c2.chunk.css",
+    "main.js": "/static/js/main.b27b7787.chunk.js",
+    "main.js.map": "/static/js/main.b27b7787.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ea4f3aca.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ea4f3aca.js.map",
+    "static/js/2.ba612c5d.chunk.js": "/static/js/2.ba612c5d.chunk.js",
+    "static/js/2.ba612c5d.chunk.js.map": "/static/js/2.ba612c5d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3c7281c15d942de052568a4607edef62.js": "/precache-manifest.3c7281c15d942de052568a4607edef62.js",
+    "precache-manifest.ff50370f23c0384cbcef1f00aa86689c.js": "/precache-manifest.ff50370f23c0384cbcef1f00aa86689c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.bc389096.chunk.css.map": "/static/css/main.bc389096.chunk.css.map",
-    "static/js/2.d4c2ef2d.chunk.js.LICENSE.txt": "/static/js/2.d4c2ef2d.chunk.js.LICENSE.txt",
+    "static/css/main.7bd277c2.chunk.css.map": "/static/css/main.7bd277c2.chunk.css.map",
+    "static/js/2.ba612c5d.chunk.js.LICENSE.txt": "/static/js/2.ba612c5d.chunk.js.LICENSE.txt",
     "static/media/1.png": "/static/media/1.eab9e2ff.png",
     "static/media/1.gif": "/static/media/1.9123fc8c.gif",
     "static/media/2.png": "/static/media/2.f5c405f7.png",
@@ -31,13 +31,12 @@
     "static/media/precarious1.jpg": "/static/media/precarious1.844f7ca3.jpg",
     "static/media/precarious2.jpg": "/static/media/precarious2.18208e29.jpg",
     "static/media/prediction.png": "/static/media/prediction.e6290dcb.png",
-    "static/media/route-traveled.png": "/static/media/route-traveled.6eca30d1.png",
-    "static/media/twbm-vol1-ed1.pdf": "/static/media/twbm-vol1-ed1.8c705995.pdf"
+    "static/media/route-traveled.png": "/static/media/route-traveled.6eca30d1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.81dbaedd.js",
-    "static/js/2.d4c2ef2d.chunk.js",
-    "static/css/main.bc389096.chunk.css",
-    "static/js/main.816da68e.chunk.js"
+    "static/js/runtime-main.ea4f3aca.js",
+    "static/js/2.ba612c5d.chunk.js",
+    "static/css/main.7bd277c2.chunk.css",
+    "static/js/main.b27b7787.chunk.js"
   ]
 }
