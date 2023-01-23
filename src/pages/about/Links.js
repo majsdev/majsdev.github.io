@@ -33,20 +33,6 @@ function Links() {
             ></img>
           </a>
         </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/js-ma/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="anchorHoverNoEffect"
-          >
-            <img
-              alt="linkedin"
-              src={linkedinIcon}
-              className="icon-height-16px"
-            ></img>
-          </a>
-        </li>
       </ul>
     </div>
   );
